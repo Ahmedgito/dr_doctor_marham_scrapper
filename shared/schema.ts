@@ -90,6 +90,63 @@ export const scraperResultsSchema = z.object({
 
 export type ScraperResults = z.infer<typeof scraperResultsSchema>;
 
+// Deduplicated doctor schema - includes all hospitals where doctor works
+export const deduplicatedDoctorSchema = z.object({
+  name: z.string(),
+  specialty: z.string(),
+  qualification: z.string(),
+  experience: z.string(),
+  reviews: z.string(),
+  satisfaction: z.string().optional(),
+  profileUrl: z.string().optional(),
+  hospitals: z.array(z.object({
+    name: z.string(),
+    address: z.string(),
+    fee: z.string().optional(),
+    url: z.string().optional(),
+  })),
+});
+
+export type DeduplicatedDoctor = z.infer<typeof deduplicatedDoctorSchema>;
+
+// Extended results with deduplication
+export const extendedResultsSchema = z.object({
+  hospitals: z.array(hospitalSchema),
+  uniqueDoctors: z.array(deduplicatedDoctorSchema),
+  metadata: z.object({
+    scrapedAt: z.string(),
+    totalHospitals: z.number(),
+    totalDoctors: z.number(),
+    uniqueDoctorCount: z.number(),
+    duration: z.string().optional(),
+  }),
+});
+
+export type ExtendedResults = z.infer<typeof extendedResultsSchema>;
+
+// Scheduler configuration schema
+export const schedulerConfigSchema = z.object({
+  enabled: z.boolean().default(false),
+  intervalMinutes: z.number().min(5).default(60),
+  maxRuns: z.number().optional(),
+  scraperConfig: scraperConfigSchema.partial().optional(),
+});
+
+export type SchedulerConfig = z.infer<typeof schedulerConfigSchema>;
+
+// Scheduler status schema
+export const schedulerStatusSchema = z.object({
+  enabled: z.boolean(),
+  intervalMinutes: z.number(),
+  runsCompleted: z.number().default(0),
+  maxRuns: z.number().optional(),
+  lastRunAt: z.string().optional(),
+  nextRunAt: z.string().optional(),
+  scraperConfig: scraperConfigSchema.partial().optional(),
+});
+
+export type SchedulerStatus = z.infer<typeof schedulerStatusSchema>;
+
 // API request/response types
 export const startScraperRequestSchema = scraperConfigSchema.partial();
 export type StartScraperRequest = z.infer<typeof startScraperRequestSchema>;

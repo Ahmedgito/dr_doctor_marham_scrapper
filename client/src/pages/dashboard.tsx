@@ -21,6 +21,7 @@ import {
   Activity,
   Database,
   FileJson,
+  FileSpreadsheet,
   AlertCircle,
   CheckCircle,
   Info,
@@ -28,9 +29,12 @@ import {
   Building2,
   Stethoscope,
   Clock,
-  Loader2
+  Loader2,
+  Users,
+  Calendar,
+  Timer
 } from "lucide-react";
-import type { ScraperStatus, ScraperResults, ScraperConfig, Hospital, Doctor } from "@shared/schema";
+import type { ScraperStatus, ScraperResults, ScraperConfig, Hospital, Doctor, ExtendedResults, SchedulerStatus } from "@shared/schema";
 
 type LogEntry = {
   timestamp: string;
@@ -271,26 +275,44 @@ function DataPreview({ results }: { results: ScraperResults | null }) {
   );
 }
 
+interface SavedStateInfo {
+  hasState: boolean;
+  hospitalsProcessed: number;
+  totalHospitals: number;
+  doctorsScraped: number;
+}
+
 function ScraperControls({ 
   status, 
+  savedState,
   onStart, 
   onPause, 
-  onStop, 
-  onExport,
+  onStop,
+  onResumeFromSave,
+  onClearSavedState,
+  onExportJson,
+  onExportCsv,
+  onExportHospitalsCsv,
   isStarting,
   isExporting
 }: { 
   status: ScraperStatus;
+  savedState: SavedStateInfo | null;
   onStart: () => void;
   onPause: () => void;
   onStop: () => void;
-  onExport: () => void;
+  onResumeFromSave: () => void;
+  onClearSavedState: () => void;
+  onExportJson: () => void;
+  onExportCsv: () => void;
+  onExportHospitalsCsv: () => void;
   isStarting: boolean;
   isExporting: boolean;
 }) {
   const isRunning = status.status === "running";
   const isPaused = status.status === "paused";
   const hasData = status.doctorsScraped > 0;
+  const hasSavedState = savedState?.hasState ?? false;
 
   return (
     <Card data-testid="card-scraper-controls">
@@ -303,7 +325,7 @@ function ScraperControls({
           <StatusBadge status={status.status} />
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent className="space-y-3">
         <div className="flex flex-wrap gap-2">
           {!isRunning && !isPaused && (
             <Button 
@@ -337,19 +359,174 @@ function ScraperControls({
               Stop
             </Button>
           )}
-          <Button 
-            variant="outline" 
-            onClick={onExport} 
-            disabled={!hasData || isExporting}
-            data-testid="button-export-data"
-          >
-            {isExporting ? (
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-            ) : (
-              <Download className="h-4 w-4 mr-2" />
+        </div>
+
+        {hasSavedState && !isRunning && !isPaused && (
+          <div className="p-3 rounded-md bg-chart-2/10 border border-chart-2/20 space-y-2">
+            <p className="text-sm font-medium">Saved Progress Available</p>
+            <p className="text-xs text-muted-foreground">
+              {savedState!.hospitalsProcessed}/{savedState!.totalHospitals} hospitals, {savedState!.doctorsScraped} doctors
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Button 
+                size="sm" 
+                variant="secondary"
+                onClick={onResumeFromSave}
+                disabled={isStarting}
+                data-testid="button-resume-from-save"
+              >
+                <RefreshCw className="h-4 w-4 mr-2" />
+                Resume from Save
+              </Button>
+              <Button 
+                size="sm" 
+                variant="ghost"
+                onClick={onClearSavedState}
+                data-testid="button-clear-saved-state"
+              >
+                Clear
+              </Button>
+            </div>
+          </div>
+        )}
+        
+        <Separator />
+        
+        <div className="space-y-2">
+          <p className="text-sm text-muted-foreground">Export Options</p>
+          <div className="flex flex-wrap gap-2">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={onExportJson} 
+              disabled={!hasData || isExporting}
+              data-testid="button-export-json"
+            >
+              <FileJson className="h-4 w-4 mr-2" />
+              JSON
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={onExportCsv} 
+              disabled={!hasData || isExporting}
+              data-testid="button-export-csv"
+            >
+              <FileSpreadsheet className="h-4 w-4 mr-2" />
+              Doctors CSV
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={onExportHospitalsCsv} 
+              disabled={!hasData || isExporting}
+              data-testid="button-export-hospitals-csv"
+            >
+              <Building2 className="h-4 w-4 mr-2" />
+              Hospitals CSV
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function SchedulerPanel({
+  schedulerStatus,
+  onStartScheduler,
+  onStopScheduler,
+  isLoading
+}: {
+  schedulerStatus: SchedulerStatus | null;
+  onStartScheduler: (intervalMinutes: number) => void;
+  onStopScheduler: () => void;
+  isLoading: boolean;
+}) {
+  const [intervalMinutes, setIntervalMinutes] = useState(60);
+  const isEnabled = schedulerStatus?.enabled ?? false;
+
+  return (
+    <Card data-testid="card-scheduler">
+      <CardHeader className="pb-3">
+        <div className="flex items-center justify-between gap-4">
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Calendar className="h-5 w-5 text-chart-5" />
+            Scheduler
+          </CardTitle>
+          <Badge variant={isEnabled ? "default" : "secondary"} className={isEnabled ? "bg-status-online" : ""}>
+            {isEnabled ? "Active" : "Inactive"}
+          </Badge>
+        </div>
+        <CardDescription>Automated periodic scraping</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="interval">Interval (minutes)</Label>
+          <Input
+            id="interval"
+            type="number"
+            min={5}
+            value={intervalMinutes}
+            onChange={(e) => setIntervalMinutes(Math.max(5, parseInt(e.target.value) || 60))}
+            disabled={isEnabled}
+            data-testid="input-scheduler-interval"
+          />
+        </div>
+
+        {schedulerStatus && isEnabled && (
+          <div className="p-3 rounded-md bg-muted/50 space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <Timer className="h-4 w-4 text-muted-foreground" />
+              <span className="text-muted-foreground">Runs completed:</span>
+              <span className="font-medium">{schedulerStatus.runsCompleted}</span>
+            </div>
+            {schedulerStatus.lastRunAt && (
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">Last run:</span>
+                <span className="font-medium">{new Date(schedulerStatus.lastRunAt).toLocaleString()}</span>
+              </div>
             )}
-            Export JSON
-          </Button>
+            {schedulerStatus.nextRunAt && (
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">Next run:</span>
+                <span className="font-medium">{new Date(schedulerStatus.nextRunAt).toLocaleString()}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div className="flex flex-wrap gap-2">
+          {!isEnabled ? (
+            <Button 
+              onClick={() => onStartScheduler(intervalMinutes)}
+              disabled={isLoading}
+              data-testid="button-start-scheduler"
+            >
+              {isLoading ? (
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              ) : (
+                <Play className="h-4 w-4 mr-2" />
+              )}
+              Start Scheduler
+            </Button>
+          ) : (
+            <Button 
+              variant="destructive"
+              onClick={onStopScheduler}
+              disabled={isLoading}
+              data-testid="button-stop-scheduler"
+            >
+              {isLoading ? (
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              ) : (
+                <Square className="h-4 w-4 mr-2" />
+              )}
+              Stop Scheduler
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>
@@ -445,6 +622,16 @@ export default function Dashboard() {
     refetchInterval: 5000,
   });
 
+  const { data: savedState, refetch: refetchSavedState } = useQuery<SavedStateInfo>({
+    queryKey: ["/api/scraper/saved-state"],
+    refetchInterval: 5000,
+  });
+
+  const { data: schedulerStatus, refetch: refetchScheduler } = useQuery<SchedulerStatus>({
+    queryKey: ["/api/scheduler/status"],
+    refetchInterval: 5000,
+  });
+
   const startMutation = useMutation({
     mutationFn: () => apiRequest("POST", "/api/scraper/start", config),
     onSuccess: () => {
@@ -469,10 +656,53 @@ export default function Dashboard() {
     onSuccess: () => {
       toast({ title: "Scraper stopped" });
       queryClient.invalidateQueries({ queryKey: ["/api/scraper/status"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/scraper/saved-state"] });
     },
   });
 
-  const exportMutation = useMutation({
+  const resumeFromSaveMutation = useMutation({
+    mutationFn: () => apiRequest("POST", "/api/scraper/resume-from-save"),
+    onSuccess: () => {
+      toast({ title: "Resuming scraper", description: "Continuing from saved progress" });
+      queryClient.invalidateQueries({ queryKey: ["/api/scraper/status"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/scraper/saved-state"] });
+    },
+    onError: (error: Error) => {
+      toast({ title: "Failed to resume", description: error.message, variant: "destructive" });
+    },
+  });
+
+  const clearSavedStateMutation = useMutation({
+    mutationFn: () => apiRequest("POST", "/api/scraper/clear-state"),
+    onSuccess: () => {
+      toast({ title: "Saved state cleared" });
+      queryClient.invalidateQueries({ queryKey: ["/api/scraper/saved-state"] });
+    },
+  });
+
+  const startSchedulerMutation = useMutation({
+    mutationFn: (intervalMinutes: number) => apiRequest("POST", "/api/scheduler/start", { 
+      intervalMinutes,
+      scraperConfig: config
+    }),
+    onSuccess: () => {
+      toast({ title: "Scheduler started", description: "Automated scraping is now active" });
+      queryClient.invalidateQueries({ queryKey: ["/api/scheduler/status"] });
+    },
+    onError: (error: Error) => {
+      toast({ title: "Failed to start scheduler", description: error.message, variant: "destructive" });
+    },
+  });
+
+  const stopSchedulerMutation = useMutation({
+    mutationFn: () => apiRequest("POST", "/api/scheduler/stop"),
+    onSuccess: () => {
+      toast({ title: "Scheduler stopped" });
+      queryClient.invalidateQueries({ queryKey: ["/api/scheduler/status"] });
+    },
+  });
+
+  const exportJsonMutation = useMutation({
     mutationFn: async () => {
       const response = await fetch("/api/scraper/export");
       if (!response.ok) throw new Error("Export failed");
@@ -487,7 +717,51 @@ export default function Dashboard() {
       document.body.removeChild(a);
     },
     onSuccess: () => {
-      toast({ title: "Export complete", description: "Data has been downloaded" });
+      toast({ title: "Export complete", description: "JSON data has been downloaded" });
+    },
+    onError: (error: Error) => {
+      toast({ title: "Export failed", description: error.message, variant: "destructive" });
+    },
+  });
+
+  const exportCsvMutation = useMutation({
+    mutationFn: async () => {
+      const response = await fetch("/api/scraper/export/csv");
+      if (!response.ok) throw new Error("Export failed");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `marham-doctors-${new Date().toISOString().split("T")[0]}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    },
+    onSuccess: () => {
+      toast({ title: "Export complete", description: "Doctors CSV has been downloaded" });
+    },
+    onError: (error: Error) => {
+      toast({ title: "Export failed", description: error.message, variant: "destructive" });
+    },
+  });
+
+  const exportHospitalsCsvMutation = useMutation({
+    mutationFn: async () => {
+      const response = await fetch("/api/scraper/export/hospitals-csv");
+      if (!response.ok) throw new Error("Export failed");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `marham-hospitals-${new Date().toISOString().split("T")[0]}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    },
+    onSuccess: () => {
+      toast({ title: "Export complete", description: "Hospitals CSV has been downloaded" });
     },
     onError: (error: Error) => {
       toast({ title: "Export failed", description: error.message, variant: "destructive" });
@@ -522,7 +796,7 @@ export default function Dashboard() {
             <Button 
               variant="ghost" 
               size="icon" 
-              onClick={() => { refetchStatus(); refetchResults(); }}
+              onClick={() => { refetchStatus(); refetchResults(); refetchSavedState(); refetchScheduler(); }}
               data-testid="button-refresh"
             >
               <RefreshCw className="h-4 w-4" />
@@ -536,18 +810,29 @@ export default function Dashboard() {
           <div className="lg:col-span-1 space-y-6">
             <ScraperControls
               status={currentStatus}
+              savedState={savedState || null}
               onStart={() => startMutation.mutate()}
               onPause={() => pauseMutation.mutate()}
               onStop={() => stopMutation.mutate()}
-              onExport={() => exportMutation.mutate()}
-              isStarting={startMutation.isPending}
-              isExporting={exportMutation.isPending}
+              onResumeFromSave={() => resumeFromSaveMutation.mutate()}
+              onClearSavedState={() => clearSavedStateMutation.mutate()}
+              onExportJson={() => exportJsonMutation.mutate()}
+              onExportCsv={() => exportCsvMutation.mutate()}
+              onExportHospitalsCsv={() => exportHospitalsCsvMutation.mutate()}
+              isStarting={startMutation.isPending || resumeFromSaveMutation.isPending}
+              isExporting={exportJsonMutation.isPending || exportCsvMutation.isPending || exportHospitalsCsvMutation.isPending}
             />
             <ProgressMetrics status={currentStatus} />
             <ConfigurationPanel 
               config={config} 
               onConfigChange={setConfig}
               disabled={isRunning}
+            />
+            <SchedulerPanel
+              schedulerStatus={schedulerStatus || null}
+              onStartScheduler={(interval) => startSchedulerMutation.mutate(interval)}
+              onStopScheduler={() => stopSchedulerMutation.mutate()}
+              isLoading={startSchedulerMutation.isPending || stopSchedulerMutation.isPending}
             />
           </div>
 

@@ -1,6 +1,6 @@
 import puppeteer, { Browser, Page } from "puppeteer";
 import * as cheerio from "cheerio";
-import type { ScraperConfig, ScraperStatus, Hospital, Doctor, ScraperResults } from "@shared/schema";
+import type { ScraperConfig, ScraperStatus, Hospital, Doctor, ScraperResults, DeduplicatedDoctor, ExtendedResults } from "@shared/schema";
 
 type LogLevel = "info" | "warn" | "error" | "success";
 
@@ -18,6 +18,45 @@ interface ErrorEntry {
 
 const BASE_URL = "https://www.marham.pk";
 
+// Helper functions for data cleaning
+function normalizeFeesToNumeric(fees: string): { formatted: string; numeric: number | null } {
+  const cleaned = fees.replace(/[^\d,]/g, '').replace(/,/g, '');
+  const numeric = cleaned ? parseInt(cleaned) : null;
+  const formatted = numeric ? `Rs. ${numeric.toLocaleString()}` : fees;
+  return { formatted, numeric };
+}
+
+function parseExperienceYears(experience: string): { formatted: string; years: number | null } {
+  const match = experience.match(/(\d+)/);
+  const years = match ? parseInt(match[1]) : null;
+  const formatted = years ? `${years} Years` : experience;
+  return { formatted, years };
+}
+
+function normalizeSpecialty(specialty: string): string {
+  return specialty
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
+
+function generateDoctorKey(doctor: Doctor): string {
+  const normalizedName = doctor.name.toLowerCase().replace(/[^a-z\s]/g, '').trim();
+  const normalizedSpecialty = doctor.specialty.toLowerCase().replace(/[^a-z\s]/g, '').trim();
+  return `${normalizedName}|${normalizedSpecialty}`;
+}
+
+interface ScraperState {
+  config: ScraperConfig;
+  hospitalsProcessed: number;
+  hospitalLinks: { name: string; url: string; address: string }[];
+  hospitals: Hospital[];
+  doctorsScraped: number;
+  startedAt?: string;
+}
+
 class MarhamScraper {
   private browser: Browser | null = null;
   private page: Page | null = null;
@@ -27,6 +66,8 @@ class MarhamScraper {
   private isPaused: boolean = false;
   private isStopped: boolean = false;
   private isRunning: boolean = false;
+  private savedState: ScraperState | null = null;
+  private pendingHospitalLinks: { name: string; url: string; address: string }[] = [];
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -120,32 +161,50 @@ class MarhamScraper {
     return BASE_URL + "/" + url;
   }
 
-  async start(config?: Partial<ScraperConfig>): Promise<void> {
+  async start(config?: Partial<ScraperConfig>, resume: boolean = false): Promise<void> {
     if (this.isRunning) {
       throw new Error("Scraper is already running");
     }
 
-    this.config = this.mergeConfig(config || {});
-    this.status = {
-      ...this.getInitialStatus(),
-      status: "running",
-      startedAt: new Date().toISOString(),
-    };
-    this.hospitals = [];
+    if (resume && this.savedState) {
+      this.log("info", "Resuming from saved state...");
+      this.config = this.savedState.config;
+      this.hospitals = [...this.savedState.hospitals];
+      this.pendingHospitalLinks = [...this.savedState.hospitalLinks];
+      this.status = {
+        ...this.getInitialStatus(),
+        status: "running",
+        startedAt: this.savedState.startedAt || new Date().toISOString(),
+        hospitalsProcessed: this.savedState.hospitalsProcessed,
+        totalHospitals: this.savedState.hospitalLinks.length,
+        doctorsScraped: this.savedState.doctorsScraped,
+      };
+      this.log("info", `Resuming from hospital ${this.savedState.hospitalsProcessed + 1}`);
+    } else {
+      this.config = this.mergeConfig(config || {});
+      this.status = {
+        ...this.getInitialStatus(),
+        status: "running",
+        startedAt: new Date().toISOString(),
+      };
+      this.hospitals = [];
+      this.pendingHospitalLinks = [];
+      this.log("info", "Starting Marham.pk scraper...");
+      this.log("info", `Target URL: ${this.config.startUrl}`);
+    }
+    
     this.isPaused = false;
     this.isStopped = false;
     this.isRunning = true;
 
-    this.log("info", "Starting Marham.pk scraper...");
-    this.log("info", `Target URL: ${this.config.startUrl}`);
-
     try {
       await this.initBrowser();
-      await this.scrapeHospitals();
+      await this.scrapeHospitals(resume);
       
       if (!this.isStopped) {
         this.status.status = "completed";
         this.status.completedAt = new Date().toISOString();
+        this.savedState = null;
         this.log("success", `Scraping completed! ${this.hospitals.length} hospitals, ${this.status.doctorsScraped} doctors`);
       } else {
         this.status.status = "idle";
@@ -179,7 +238,39 @@ class MarhamScraper {
   stop(): void {
     this.isStopped = true;
     this.isPaused = false;
+    this.saveState();
     this.log("info", "Stop signal received, finishing current task...");
+  }
+
+  private saveState(): void {
+    if (this.pendingHospitalLinks.length > 0 || this.hospitals.length > 0) {
+      this.savedState = {
+        config: this.config,
+        hospitalsProcessed: this.status.hospitalsProcessed,
+        hospitalLinks: this.pendingHospitalLinks,
+        hospitals: [...this.hospitals],
+        doctorsScraped: this.status.doctorsScraped,
+        startedAt: this.status.startedAt,
+      };
+      this.log("info", `State saved: ${this.status.hospitalsProcessed} hospitals processed, ${this.hospitals.length} ready for resume`);
+    }
+  }
+
+  getSavedState(): { hasState: boolean; hospitalsProcessed: number; totalHospitals: number; doctorsScraped: number } {
+    if (!this.savedState) {
+      return { hasState: false, hospitalsProcessed: 0, totalHospitals: 0, doctorsScraped: 0 };
+    }
+    return {
+      hasState: true,
+      hospitalsProcessed: this.savedState.hospitalsProcessed,
+      totalHospitals: this.savedState.hospitalLinks.length,
+      doctorsScraped: this.savedState.doctorsScraped,
+    };
+  }
+
+  clearSavedState(): void {
+    this.savedState = null;
+    this.log("info", "Saved state cleared");
   }
 
   getStatus(): ScraperStatus {
@@ -196,6 +287,86 @@ class MarhamScraper {
         duration: this.calculateDuration(),
       },
     };
+  }
+
+  getExtendedResults(): ExtendedResults {
+    const uniqueDoctors = this.deduplicateDoctors();
+    return {
+      hospitals: this.hospitals,
+      uniqueDoctors,
+      metadata: {
+        scrapedAt: new Date().toISOString(),
+        totalHospitals: this.hospitals.length,
+        totalDoctors: this.status.doctorsScraped,
+        uniqueDoctorCount: uniqueDoctors.length,
+        duration: this.calculateDuration(),
+      },
+    };
+  }
+
+  private deduplicateDoctors(): DeduplicatedDoctor[] {
+    const doctorMap = new Map<string, DeduplicatedDoctor>();
+
+    for (const hospital of this.hospitals) {
+      for (const doctor of hospital.doctors) {
+        const key = generateDoctorKey(doctor);
+        
+        if (doctorMap.has(key)) {
+          const existing = doctorMap.get(key)!;
+          const hospitalExists = existing.hospitals.some(
+            h => h.name.toLowerCase() === hospital.hospitalName.toLowerCase()
+          );
+          if (!hospitalExists) {
+            existing.hospitals.push({
+              name: hospital.hospitalName,
+              address: hospital.hospitalAddress,
+              fee: doctor.fees,
+              url: hospital.hospitalUrl,
+            });
+          }
+          if (!existing.profileUrl && doctor.profileUrl) {
+            existing.profileUrl = doctor.profileUrl;
+          }
+          if (!existing.reviews && doctor.reviews) {
+            existing.reviews = doctor.reviews;
+          }
+        } else {
+          doctorMap.set(key, {
+            name: doctor.name,
+            specialty: normalizeSpecialty(doctor.specialty),
+            qualification: doctor.qualification,
+            experience: parseExperienceYears(doctor.experience).formatted,
+            reviews: doctor.reviews,
+            satisfaction: doctor.satisfaction,
+            profileUrl: doctor.profileUrl,
+            hospitals: [{
+              name: hospital.hospitalName,
+              address: hospital.hospitalAddress,
+              fee: doctor.fees,
+              url: hospital.hospitalUrl,
+            }],
+          });
+        }
+
+        for (const otherHospital of doctor.otherHospitals) {
+          const existing = doctorMap.get(key);
+          if (existing) {
+            const hospitalExists = existing.hospitals.some(
+              h => h.name.toLowerCase() === otherHospital.name.toLowerCase()
+            );
+            if (!hospitalExists) {
+              existing.hospitals.push({
+                name: otherHospital.name,
+                address: otherHospital.address,
+                fee: otherHospital.fee,
+              });
+            }
+          }
+        }
+      }
+    }
+
+    return Array.from(doctorMap.values());
   }
 
   private calculateDuration(): string {
@@ -240,26 +411,37 @@ class MarhamScraper {
     }
   }
 
-  private async scrapeHospitals(): Promise<void> {
+  private async scrapeHospitals(resume: boolean = false): Promise<void> {
     if (!this.page) throw new Error("Browser not initialized");
 
-    const startUrl = this.makeAbsoluteUrl(this.config.startUrl);
-    this.log("info", `Navigating to ${startUrl}`);
-    await this.page.goto(startUrl, { waitUntil: "networkidle2", timeout: 60000 });
-    await this.delay(2000);
+    let hospitalsToProcess: { name: string; url: string; address: string }[];
+    let startIndex = 0;
 
-    const hospitalLinks = await this.extractHospitalLinks();
-    this.status.totalHospitals = this.config.maxHospitals 
-      ? Math.min(hospitalLinks.length, this.config.maxHospitals) 
-      : hospitalLinks.length;
+    if (resume && this.pendingHospitalLinks.length > 0) {
+      hospitalsToProcess = this.pendingHospitalLinks;
+      startIndex = this.status.hospitalsProcessed;
+      this.log("info", `Resuming with ${hospitalsToProcess.length - startIndex} hospitals remaining`);
+    } else {
+      const startUrl = this.makeAbsoluteUrl(this.config.startUrl);
+      this.log("info", `Navigating to ${startUrl}`);
+      await this.page.goto(startUrl, { waitUntil: "networkidle2", timeout: 60000 });
+      await this.delay(2000);
 
-    this.log("info", `Found ${hospitalLinks.length} hospitals to scrape`);
+      const hospitalLinks = await this.extractHospitalLinks();
+      this.status.totalHospitals = this.config.maxHospitals 
+        ? Math.min(hospitalLinks.length, this.config.maxHospitals) 
+        : hospitalLinks.length;
 
-    const hospitalsToProcess = this.config.maxHospitals 
-      ? hospitalLinks.slice(0, this.config.maxHospitals) 
-      : hospitalLinks;
+      this.log("info", `Found ${hospitalLinks.length} hospitals to scrape`);
 
-    for (let i = 0; i < hospitalsToProcess.length; i++) {
+      hospitalsToProcess = this.config.maxHospitals 
+        ? hospitalLinks.slice(0, this.config.maxHospitals) 
+        : hospitalLinks;
+      
+      this.pendingHospitalLinks = hospitalsToProcess;
+    }
+
+    for (let i = startIndex; i < hospitalsToProcess.length; i++) {
       if (await this.waitForPauseOrStop()) break;
 
       const hospitalInfo = hospitalsToProcess[i];
