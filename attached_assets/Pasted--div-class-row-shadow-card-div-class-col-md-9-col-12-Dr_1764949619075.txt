@@ -1,0 +1,32 @@
+<div class="row shadow-card">
+        <div class="col-md-9 col-12">
+            <!-- Dr. Intro-->
+            <div class="row">
+                <div class="col-3 col-md-2">
+                    <picture>
+                        <!-- For mobile screens -->
+                        <source media="(max-width: 767px)" srcset="https://staticconnect.marham.pk/assets/doctors/20685/dr-feroze-ahmed-mahar-urologist-karachi-32_80X80.webp">
+                        <!-- For desktop screens -->
+                        <source media="(min-width: 768px)" srcset="https://staticconnect.marham.pk/assets/doctors/20685/dr-feroze-ahmed-mahar-urologist-karachi-32_170X170.webp">
+                        <!-- Fallback for browsers that do not support the picture element -->
+                        <img src="" class="round-img" alt="Profile Photo of Dr. Feroze Ahmed Mahar Urologist Karachi">
+                    </picture>
+                </div>
+                <div class="col-9 col-md-10">
+                    <div>
+                                                    <h1 class="mb-0">Dr. Feroze Ahmed Mahar</h1>
+                                                                        <span class="text-green text-bold"><i class="fa-solid fa-clipboard-check"></i> PMDC Verified </span>
+                                                <p class="mt-10"><strong class="text-sm">Urologist</strong>  <span class="">- نظامِ اخراج کے ماہر ڈاکٹر</span></p>
+                        <p class="text-sm mb-0">MBBS, MS (Urology) </p>
+                        <p class="text-sm mb-0">Consultant</p>
+                                                <a href="#reviews" class="mb-0 text-sm text-golden scroll-to" data-scroll-to="reviews-scroll"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i> 158 Reviews</a>
+                                                                        <p class="mb-0 text-sm">20 Yrs Experience</p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-12 pt-10 d-xs-none">
+                        <a class="dr_profile_tap_book_oc" data-type="top" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61"><button class="button button-block button-blue">Consult Online</button></a>
+                                                <a class="dr_profile_tap_book_appt" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter"><button class="button button-block button-primary">Visit In Clinic</button></a>
+                                </div>
+    </div>

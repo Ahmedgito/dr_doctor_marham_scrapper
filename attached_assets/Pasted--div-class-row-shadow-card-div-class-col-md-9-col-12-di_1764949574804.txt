@@ -1,0 +1,253 @@
+<div class="row shadow-card">
+	<div class="col-md-9 col-12">
+		<div class="row">
+			<div class="col-3 col-md-2">
+				<a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" style="cursor: pointer" class="dr_profile_opened_from_hospital_profile">
+				<picture>
+					<!-- For mobile screens -->
+					<source media="(max-width: 767px)" srcset="https://staticconnect.marham.pk/assets/doctors/20685/dr-feroze-ahmed-mahar-urologist-karachi-32_80X80.webp">
+					<!-- For desktop screens -->
+					<source media="(min-width: 768px)" srcset="https://staticconnect.marham.pk/assets/doctors/20685/dr-feroze-ahmed-mahar-urologist-karachi-32_170X170.webp">
+					<!-- Fallback for browsers that do not support the picture element -->
+					<img alt="Profile Photo of Urologist in Karachi - Dr. Feroze Ahmed Mahar" src="" class="round-img ">
+				</picture>
+				</a>
+			</div>
+			<div class="col-9 col-md-10">
+				<div>
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" class="text-blue dr_profile_opened_from_hospital_profile">
+							<h3 class="mb-0 text-underline">
+								Dr. Feroze Ahmed Mahar
+							</h3> 
+														<span class="text-green text-bold"><i class="fa-solid fa-clipboard-check"></i> PMDC Verified </span>
+													</a>
+					</div>
+					<p class="mb-0 text-sm">Urologist</p>
+					<p class="text-sm">MBBS, MS (Urology)</p>
+				</div>
+				
+                <div id="fastConfirmModal-20685" class="healing-matrics-modal" onclick="this.style.display='none'">
+                    <div class="healing-matrics-modal-content" onclick="event.stopPropagation()">
+                        <div class="healing-matrics-modal-header">Quick Booking, Zero Waiting</div>
+                        <div class="healing-matrics-modal-body">Pick a Fast Confirm doctor, and your booking is confirmed right away, no delays.</div>
+                        <button class="healing-matrics-modal-close-btn" onclick="document.getElementById('fastConfirmModal-20685').style.display='none'">Got it!</button>
+                    </div>
+                </div>
+				<div class="row">
+										<div class="col-4">
+						<a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar#reviews-scroll" class="dr_profile_opened_from_hospital_profile_reviews">
+							<p class="mb-0 text-sm">Reviews</p>
+							<p class="text-bold text-sm text-golden"> <i class="fa-solid fa-thumbs-up" aria-hidden="true"></i> 158</p>
+						</a>
+					</div>
+					
+										<div class="col-4">
+						<p class="mb-0 text-sm">Experience</p>
+						<p class="text-bold text-sm">20 Yrs</p>
+					</div>
+					
+										<div class="col-4">
+						<p class="mb-0 text-sm">Satisfaction</p>
+						<p class="text-bold text-sm">95%</p>
+					</div>
+									</div>
+			</div>
+			
+					</div>
+	</div>
+	<div class="d-xs-none col-md-3 col-12 pt-10">
+								<a class="button button-block button-primary dr_profile_opened_from_hospital_profile_btn_video_call" href="https://www.marham.pk/online-consultation/request?id=61&amp;d_id=20685">Video Call</a>
+									<a class="button button-block button-blue dr_profile_opened_from_hospital_profile_btn_view_timings" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter">View Timings</a>
+					
+			</div>
+	
+    	<div class="mt-4 row">
+		<div class="col-12 horizontal-scroll d-flex smart-bar">
+																						<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="116" data-doctorhospitalid="40814" data-hospitalname="Hashmanis Hospital - M A Jinnah Road" data-hospitalcity="Karachi" data-hospitaladdress="Jacob Lines" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/hashmanis-hospital-m-a-jinnah-road/jacob-lines" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="1500" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Hashmanis Hospital - M A Jinnah Road, Jacob Lines, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available from Dec 12</p>
+					<p class="mb-0 price text-sm text-bold">Rs. 1,500 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="6924" data-doctorhospitalid="54157" data-hospitalname="Zain General Hospital." data-hospitalcity="Karachi" data-hospitaladdress="mosmiat university" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/zain-general-hospital/mosmiat-university" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="1200" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Zain General Hospital., mosmiat university, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available Tomorrow </p>
+					<p class="mb-0 price text-sm text-bold">Rs. 1,200 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="591" data-doctorhospitalid="63097" data-hospitalname="Darul Sehat Hospital" data-hospitalcity="Karachi" data-hospitaladdress="Gulistan-e-Jauhar - Block 4A" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/darul-sehat-hospital/gulistan-e-jauhar-block-4a" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="1500" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Darul Sehat Hospital, Gulistan-e-Jauhar - Block 4A, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available Tomorrow </p>
+					<p class="mb-0 price text-sm text-bold">Rs. 1,500 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="2765" data-doctorhospitalid="85593" data-hospitalname="Altamash General Hospital" data-hospitalcity="Karachi" data-hospitaladdress="Clifton" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/altamash-general-hospital/clifton" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="2000" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Altamash General Hospital, Clifton, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available from Dec 08</p>
+					<p class="mb-0 price text-sm text-bold">Rs. 2,000 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="5907" data-doctorhospitalid="130724" data-hospitalname="Tahir Medical Centre" data-hospitalcity="Karachi" data-hospitaladdress="Old Dhoraji" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/tahir-medical-centre/old-dhoraji" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="2000" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Tahir Medical Centre, Old Dhoraji, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available from Dec 07</p>
+					<p class="mb-0 price text-sm text-bold">Rs. 2,000 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="1135" data-doctorhospitalid="45844" data-hospitalname="Modern Hospital" data-hospitalcity="Karachi" data-hospitaladdress="Gulshan e Iqbal" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/modern-hospital/gulshan-e-iqbal" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="1500" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Modern Hospital, Gulshan e Iqbal, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available Tomorrow </p>
+					<p class="mb-0 price text-sm text-bold">Rs. 1,500 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="10863" data-doctorhospitalid="138456" data-hospitalname="Hilal e Ahmer Hospital Clifton" data-hospitalcity="Karachi" data-hospitaladdress="Clifton - Block 7" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/hilal-e-ahmer-hospital-clifton/clifton-block-7" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="2000" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Hilal e Ahmer Hospital Clifton, Clifton - Block 7, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available Today</p>
+					<p class="mb-0 price text-sm text-bold">Rs. 2,000 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="9664" data-doctorhospitalid="139997" data-hospitalname="Australian Concept Fertility Centre" data-hospitalcity="Karachi" data-hospitaladdress="Clifton" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/australian-concept-fertility-centre/clifton" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="3000" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Australian Concept Fertility Centre, Clifton, Karachi</p>
+											</div>
+					<p class="text-sm">Available from Dec 08</p>
+					<p class="mb-0 price text-sm text-bold">Rs. 3,000 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+																			<div class="mb-2 mr-10 product-card card-hospital cursor-pointer listing_practice_details_hospital selectAppointmentOrOc" style="border:#004d71 solid 1px;" data-hospitalid="1475" data-doctorhospitalid="135159" data-hospitalname="Hamdard University Hospital" data-hospitalcity="Karachi" data-hospitaladdress="Saddar" data-hospitalprofileurl="https://www.marham.pk/hospitals/karachi/hamdard-university-hospital/saddar" data-hospitaltype="1" data-selecteddate="" data-displaydayname="" data-selectedtime="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-doctorprofileurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar" data-amount="1500" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Hamdard University Hospital, Saddar, Karachi</p>
+													                            <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+								<div class="icon-wrapper-oc-doc-profile">
+									<i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+								</div>
+								<div class="response-text-oc-doc-profile" style="color: #04521B">
+									Fast Confirm
+								</div>
+							</div>
+											</div>
+					<p class="text-sm">Available Tomorrow </p>
+					<p class="mb-0 price text-sm text-bold">Rs. 1,500 </p>
+					<div class="justify-content-between d-flex align-items-center"></div>
+				</div>
+			</div>
+												<div class="mb-2 mr-10 product-card col-9 col-md-5 col-lg-3 col-sm-5 cursor-pointer listing_practice_detail_vc selectAppointmentOrOc" style="border:#02c782 solid 1px;" data-hospitalid="2217" data-doctorhospitalid="40815" data-hospitalname="Video Consultation" data-hospitalcity="Karachi" data-hospitaladdress="Garden Town" data-hospitaltype="2" data-selecteddate="" data-selectedtime="" data-displaydayname="" data-specialityid="61" data-useremail="" data-doctorid="20685" data-amount="1,500" data-discountedfee="0" data-docname="Dr. Feroze Ahmed Mahar" data-specialityname="Urologist" data-onclickurl="https://www.marham.pk/online-consultation/request?id=61&amp;d_id=20685" onclick="openModalSelectAppointmentOrOc(this)">
+				<div class="">
+					<div style="display: flex; flex-direction: row; gap:16px;align-items: center;">
+						<p class="mb-0 text-bold text-blue text-sm">Video Consultation</p>
+						                                                <div class="custom-response-badge-oc-doc-profile custom-badge-instant-oc-doc-profile" style="border: 1px solid #ACE0BE; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Doctor confirms immediately after booking." onclick="event.stopPropagation(); document.getElementById('fastConfirmModal-20685').style.display='flex'">
+                            <div class="icon-wrapper-oc-doc-profile">
+                                <i class="bi bi-lightning-charge-fill" style="color: #04521B;"></i>
+                            </div>
+                            <div class="response-text-oc-doc-profile" style="color: #04521B">
+                                Fast Confirm
+                            </div>
+                        </div>
+                        					</div>
+					<p class="text-sm text-wrap">Available Today</p>
+					<div class="d-flex align-items-center mb-1">
+						<p class="mb-0 price text-sm text-bold">Rs. 1,500</p>
+					</div>
+				</div>
+			</div>
+					</div>
+	</div>
+    
+	<div class="d-sm-none col-md-3 col-12 pt-10">
+		<div class="row">
+											<div class="col-6">
+					<a class="button button-block button-primary dr_profile_opened_from_hospital_profile_btn_video_call" href="https://www.marham.pk/online-consultation/request?id=61&amp;d_id=20685">Video Call</a>
+				</div>
+												<div class="col-6">
+					<a class="button button-block button-blue dr_profile_opened_from_hospital_profile_btn_view_timings" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter">View Timings</a>
+				</div>
+												</div>
+	</div>
+</div>

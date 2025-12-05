@@ -1,0 +1,1414 @@
+<div class="col-12 col-md-8">
+
+                    <!-- Reviews -->
+                                            <!-- New reviews section -->
+<section class="container bg-white mt-10" id="reviews-scroll">
+    <div class="row shadow-card">
+        <h2 class="mb-0">158 Reviews</h2>
+        <div class="rating-container">
+            <div class="rating-stars">
+                <span class="rating" style="width: 100%"></span>
+            </div>
+        </div>
+        <svg width="0" height="0">
+            <defs>
+                <clipPath id="svgStars" clipPathUnits="objectBoundingBox">
+                    <polygon points=".80 .073 .738 .118 .762 .19 .70 .145 .638 .19 .662 .118 .60 .073 .538 .118 .562 .19 .50 .145 .438 .19 .462 .118 .40 .073 .338 .118 .362 .19 .30 .145 .238 .19 .262 .118 .20 .073 .138 .118 .162 .19 .10 .145 .038 .19 .062 .118 0 .073 .076 .073 .10 0 .124 .073 .276 .073 .30 0 .324 .073 .476 .073 .50 0 .524 .073 .676 .073 .70 0 .724 .073 .876 .073 .90 0 .924 .073 1 .073 .938 .118 .962 .19 .90 .145 .838 .19 .862 .118 "></polygon>
+                </clipPath>
+            </defs>
+        </svg>
+        <p class="text-lg mb-10"><span class="tag-highlight-round" style="font-size:18px">5/5</span> Average rating based on 158 reviews.</p>
+
+
+        <div class="row mt-10 mb-10">
+
+            <div class="col-6 col-md-3" style="border-right: 1px solid #eee">
+                <p class="mb-0 text-sm">Wait Time</p>
+                <p class="text-bold">6 mins</p>
+            </div>
+
+        <div class="col-6 col-md-3" style="border-right: 1px solid #eee">
+                <p class="mb-0 text-sm">Avg. Time to Patient</p>
+                <p class="text-bold">12 mins</p>
+        </div>
+        </div>
+
+        
+
+        <!-- reviews bar -->
+        <div>
+             <div class="row mt-10">
+                <div class="col-5 col-md-2 mb-0">Patient Satisfaction</div>
+                <div class="col-5 col-md-8">
+                    <div class="">
+                        <div class="bar-container">
+                          <div class="bar-9" style="width: 94%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-md-1 text-right mb-0">4.7/5</div>
+              </div>
+           
+              <div class="row">
+                <div class="col-5 col-md-2 mb-0">Diagnosis</div>
+                <div class="col-5 col-md-8">
+                    <div class="">
+                        <div class="bar-container">
+                          <div class="bar-10" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-md-1 text-right mb-0">4.75/5</div>
+              </div>
+                              <div class="row">
+                    <div class="col-5 col-md-2 mb-0">Staff Behaviour</div>
+                    <div class="col-5 col-md-8">
+                        <div class="">
+                            <div class="bar-container">
+                            <div class="bar-9" style="width: 99%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-md-1 text-right mb-0">4.95/5</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-5 col-md-2 mb-0">Clinic Environment</div>
+                    <div class="col-5 col-md-8">
+                        <div class="">
+                            <div class="bar-container">
+                            <div class="bar-10" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-md-1 text-right mb-0">5/5</div>
+                </div>
+                      </div>
+
+        <hr class="mt-10 mb-10" style="border:2px solid #f1f1f1">
+        <div id="reviews">
+                        <div class="container">
+    <div class="row border-card">
+    
+        <div class="col-12">
+            <div class="row justify-content-between">
+                <div class="col-8 img-content">
+                <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+                <g>
+                <path class="st0" d="M256,0C114.613,0,0,114.616,0,255.996C0,397.382,114.613,512,256,512c141.386,0,256-114.617,256-256.004   C512,114.616,397.387,0,256,0z M255.996,401.912c-69.247-0.03-118.719-9.438-117.564-18.058   c6.291-47.108,44.279-51.638,68.402-70.94c10.832-8.666,16.097-6.5,16.097-20.945c0-5.053,0-14.446,0-23.111   c-6.503-7.219-8.867-6.317-14.366-34.663c-11.112,0-10.396-14.446-15.638-27.255c-4.09-9.984-0.988-14.294,2.443-16.165   c-1.852-9.87-0.682-43.01,13.532-60.259l-2.242-15.649c0,0,4.47,1.121,15.646-1.122c11.181-2.227,38.004-8.93,53.654,4.477   c37.557,5.522,47.53,36.368,40.204,72.326c3.598,1.727,7.178,5.962,2.901,16.392c-5.238,12.809-4.522,27.255-15.634,27.255   c-5.496,28.346-7.863,27.444-14.366,34.663c0,8.666,0,18.058,0,23.111c0,14.445,5.261,12.279,16.093,20.945   c24.126,19.301,62.111,23.831,68.406,70.94C374.715,392.474,325.246,401.882,255.996,401.912z">
+                </path>
+                </g>
+                </svg>
+                <span class="text-bold text-sm text-grey">V.P - 21/04/2021</span>
+                </div>
+                <div class="col-4" style="text-align: right;">
+                
+                </div>
+            </div>
+            <div class="mt-10">
+                <p><span class="text-bold text-lg text-green"><i class="fa-solid fa-thumbs-up fa-beat" aria-hidden="true"></i>  I am satisfied with the doctor.</span></p>
+                <!-- <ul>
+                <li class="text-sm"><i class="fa-solid fa-check text-golden" aria-hidden="true"></i> <span class="text-bold">Satisfied</span> with diagnosis and treatment</li>
+                </ul> -->
+                <p class="">Yours is the best medical practice I have experienced. The doctors, PAs, nurses and staff are all first class. My most recent experience was scheduling a follow-up appointment. He was attentive and professional in making sure I was taken care of. He is emblematic of everyone I have come into contact with at your practice. Many thanks.”</p>
+
+                <ul class="ul-custom chips-list">
+                                                            <li><span class="chips-highlight-green"><i class="fa-solid fa-circle-check"></i> Great Experience</span></li>
+                                                                                                </ul>
+
+            <!--  <div class="row">
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                </div> -->
+
+                <div class="justify-content-between d-flex align-items-center">
+                    
+                                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="mt-10 mb-10" style="border:2px solid #f1f1f1">                        <div class="container">
+    <div class="row border-card">
+    
+        <div class="col-12">
+            <div class="row justify-content-between">
+                <div class="col-8 img-content">
+                <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+                <g>
+                <path class="st0" d="M256,0C114.613,0,0,114.616,0,255.996C0,397.382,114.613,512,256,512c141.386,0,256-114.617,256-256.004   C512,114.616,397.387,0,256,0z M255.996,401.912c-69.247-0.03-118.719-9.438-117.564-18.058   c6.291-47.108,44.279-51.638,68.402-70.94c10.832-8.666,16.097-6.5,16.097-20.945c0-5.053,0-14.446,0-23.111   c-6.503-7.219-8.867-6.317-14.366-34.663c-11.112,0-10.396-14.446-15.638-27.255c-4.09-9.984-0.988-14.294,2.443-16.165   c-1.852-9.87-0.682-43.01,13.532-60.259l-2.242-15.649c0,0,4.47,1.121,15.646-1.122c11.181-2.227,38.004-8.93,53.654,4.477   c37.557,5.522,47.53,36.368,40.204,72.326c3.598,1.727,7.178,5.962,2.901,16.392c-5.238,12.809-4.522,27.255-15.634,27.255   c-5.496,28.346-7.863,27.444-14.366,34.663c0,8.666,0,18.058,0,23.111c0,14.445,5.261,12.279,16.093,20.945   c24.126,19.301,62.111,23.831,68.406,70.94C374.715,392.474,325.246,401.882,255.996,401.912z">
+                </path>
+                </g>
+                </svg>
+                <span class="text-bold text-sm text-grey">V.P - 21/04/2021</span>
+                </div>
+                <div class="col-4" style="text-align: right;">
+                
+                </div>
+            </div>
+            <div class="mt-10">
+                <p><span class="text-bold text-lg text-green"><i class="fa-solid fa-thumbs-up fa-beat" aria-hidden="true"></i>  I am satisfied with the doctor.</span></p>
+                <!-- <ul>
+                <li class="text-sm"><i class="fa-solid fa-check text-golden" aria-hidden="true"></i> <span class="text-bold">Satisfied</span> with diagnosis and treatment</li>
+                </ul> -->
+                <p class="">The doctor was able to see me promptly and immediately began treatment. He is very knowledgeable, professional, and compassionate. He took time to explain each phase of my treatment and surgery. He answered all questions and addressed my anxieties thoroughly. I believe that he saved my kidneys!! Thank you!”</p>
+
+                <ul class="ul-custom chips-list">
+                                                            <li><span class="chips-highlight-green"><i class="fa-solid fa-circle-check"></i> Great Experience</span></li>
+                                                                                                </ul>
+
+            <!--  <div class="row">
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                </div> -->
+
+                <div class="justify-content-between d-flex align-items-center">
+                    
+                                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="mt-10 mb-10" style="border:2px solid #f1f1f1">                        <div class="container">
+    <div class="row border-card">
+    
+        <div class="col-12">
+            <div class="row justify-content-between">
+                <div class="col-8 img-content">
+                <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+                <g>
+                <path class="st0" d="M256,0C114.613,0,0,114.616,0,255.996C0,397.382,114.613,512,256,512c141.386,0,256-114.617,256-256.004   C512,114.616,397.387,0,256,0z M255.996,401.912c-69.247-0.03-118.719-9.438-117.564-18.058   c6.291-47.108,44.279-51.638,68.402-70.94c10.832-8.666,16.097-6.5,16.097-20.945c0-5.053,0-14.446,0-23.111   c-6.503-7.219-8.867-6.317-14.366-34.663c-11.112,0-10.396-14.446-15.638-27.255c-4.09-9.984-0.988-14.294,2.443-16.165   c-1.852-9.87-0.682-43.01,13.532-60.259l-2.242-15.649c0,0,4.47,1.121,15.646-1.122c11.181-2.227,38.004-8.93,53.654,4.477   c37.557,5.522,47.53,36.368,40.204,72.326c3.598,1.727,7.178,5.962,2.901,16.392c-5.238,12.809-4.522,27.255-15.634,27.255   c-5.496,28.346-7.863,27.444-14.366,34.663c0,8.666,0,18.058,0,23.111c0,14.445,5.261,12.279,16.093,20.945   c24.126,19.301,62.111,23.831,68.406,70.94C374.715,392.474,325.246,401.882,255.996,401.912z">
+                </path>
+                </g>
+                </svg>
+                <span class="text-bold text-sm text-grey">Z.A - 07/12/2021</span>
+                </div>
+                <div class="col-4" style="text-align: right;">
+                
+                </div>
+            </div>
+            <div class="mt-10">
+                <p><span class="text-bold text-lg text-green"><i class="fa-solid fa-thumbs-up fa-beat" aria-hidden="true"></i>  I am satisfied with the doctor.</span></p>
+                <!-- <ul>
+                <li class="text-sm"><i class="fa-solid fa-check text-golden" aria-hidden="true"></i> <span class="text-bold">Satisfied</span> with diagnosis and treatment</li>
+                </ul> -->
+                <p class="">It was a fine check up. The DOC listened to me carefully and  then diagnosed my disease. I would rate him 10/10</p>
+
+                <ul class="ul-custom chips-list">
+                                        <li><span class="chips-highlight-green"><i class="fa-solid fa-circle-check"></i> No Waiting Time </span></li>
+                                                            <li><span class="chips-highlight-green"><i class="fa-solid fa-circle-check"></i> Great Experience</span></li>
+                                                                                                </ul>
+
+            <!--  <div class="row">
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                    <div class="col-6 col-md-3 mb-10">
+                        
+                    </div>
+                </div> -->
+
+                <div class="justify-content-between d-flex align-items-center">
+                    
+                                <p class="text-sm text-grey">Video Consultation</p>
+                                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="mt-10 mb-10" style="border:2px solid #f1f1f1">                    </div>
+        </div></section>
+                                        <div class="row">
+                                                    <div class="col-6 col-md-3">
+                                <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/reviews" class="button button-block button button-outline dr_profile_tapped_reviews" data-on-panel="1" data-speciality-name="urologist">
+                                    View All Reviews
+                                </a>
+                            </div>
+                        
+                        <div class="col-6 col-md-3">
+                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/review-doctor" class="button button-block button button-outline post_a_review">
+                                Post a Review
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Practice Details -->
+                    <section class="p-xy">
+                        <h2 class="pt-10">Practice Address and Timings</h2>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="oc_practice_detail_card_dr_profile_tapped text-black">
+                                                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="2217" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="oc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="oc_practice_detail_card_dr_profile_tapped text-black">
+                                            <h3 class="mb-10 text-bold text-underline">Video Consultation</h3>
+                                            <p class=""> <span class=""> </span>Online</p>
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                                                                                                                                        <p class="">Rs. 1,500</p>
+                                                                                                                                                            </div>
+                                            </div>
+                                            <div class="">
+                                                <p class="text-bold">Available Timings</p>
+                                                <table>
+                                                                                                                                                    <tbody><tr class="text-sm">
+                                                        <td class="text-bold text-blue">Mon</td>
+                                                        <td>02:00 PM - 11:00 PM</td>
+                                                    </tr>
+                                                                                                                                                                                                    <tr class="text-sm">
+                                                        <td class="text-bold text-blue">Tue</td>
+                                                        <td>02:00 PM - 11:00 PM</td>
+                                                    </tr>
+                                                                                                                                                                                                    <tr class="text-sm">
+                                                        <td class="text-bold text-blue">Wed</td>
+                                                        <td>02:00 PM - 11:00 PM</td>
+                                                    </tr>
+                                                                                                                                                                                                    <tr class="text-sm">
+                                                        <td class="text-bold text-blue">Thu</td>
+                                                        <td>02:00 PM - 11:00 PM</td>
+                                                    </tr>
+                                                                                                                                                                                                    <tr class="text-sm">
+                                                        <td class="text-bold text-blue">Fri</td>
+                                                        <td>02:00 PM - 11:00 PM</td>
+                                                    </tr>
+                                                                                                                                                                                                    <tr class="text-sm">
+                                                        <td class="text-bold text-blue">Sat</td>
+                                                        <td>02:00 PM - 11:00 PM</td>
+                                                    </tr>
+                                                                                                                                                </tbody></table>
+                                            </div>
+                                            </a><div class="col-12 col-md-12"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="oc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="oc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-12"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="oc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/online-consultation/request?d_id=20685&amp;id=61" class="button button-primary button-block oc_practice_detail_btn_dr_profile_tapped">Video Call</a>
+                                                        </div>
+                                                        <a class="text-center mt-10 video_consultation_tutorial_clicked" id="viewTutorialVideo">How Video Call Works? - Watch Video Tutorial</a>
+                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="5907" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Tahir Medical Centre</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Old Dhoraji, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 2,000 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Sun</td>
+                                                                <td>12:00 AM - 01:00 AM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.882573516287152,67.0821573527601&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.882573516287152,67.0821573527601&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=5907&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="9664" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Australian Concept Fertility Centre</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Clifton, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 3,000 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Mon</td>
+                                                                <td>03:30 PM - 05:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Wed</td>
+                                                                <td>03:30 PM - 05:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Fri</td>
+                                                                <td>03:30 PM - 05:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.82908254151884,67.0214524796237&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.82908254151884,67.0214524796237&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=9664&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="116" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Hashmanis Hospital - M A Jinnah Road</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Jacob Lines, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 1,500 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Fri</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.869823,67.034689&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.869823,67.034689&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=116&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="1475" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Hamdard University Hospital</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Saddar, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 1,500 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Mon</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Tue</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Wed</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Thu</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Fri</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Sat</td>
+                                                                <td>04:00 PM - 06:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.867879,67.03045&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.867879,67.03045&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1475&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="1135" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Modern Hospital</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Gulshan e Iqbal, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 1,500 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Tue</td>
+                                                                <td>07:00 PM - 09:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Thu</td>
+                                                                <td>07:00 PM - 09:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Sat</td>
+                                                                <td>07:00 PM - 09:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.926183,67.107208&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.926183,67.107208&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=1135&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="2765" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Altamash General Hospital</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Clifton, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 2,000 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Mon</td>
+                                                                <td>08:00 PM - 09:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Wed</td>
+                                                                <td>08:00 PM - 09:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.815205,67.002456&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.815205,67.002456&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=2765&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="10863" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Hilal e Ahmer Hospital Clifton</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Clifton - Block 7, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 2,000 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Mon</td>
+                                                                <td>08:30 PM - 10:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Wed</td>
+                                                                <td>08:30 PM - 10:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Fri</td>
+                                                                <td>08:30 PM - 10:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.83549203779613,67.03334944603967&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.83549203779613,67.03334944603967&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=10863&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="591" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Darul Sehat Hospital</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: Gulistan-e-Jauhar - Block 4A, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 1,500 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-6">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Tue</td>
+                                                                <td>09:00 PM - 10:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Thu</td>
+                                                                <td>09:00 PM - 10:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Sat</td>
+                                                                <td>09:00 PM - 10:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                                <div class="col-12 order-first col-md-6">
+                                                    <iframe title="Google Map" width="300" height="200" frameborder="0" style="border:0" allowfullscreen="" class="google-map mb-10" data-lat="" data-lng="" data-src="https://maps.google.com/maps?q=24.914356,67.127167&amp;hl=es;z=14&amp;output=embed" src="https://maps.google.com/maps?q=24.914356,67.127167&amp;hl=es;z=14&amp;output=embed" data-mapconfigured="1"></iframe>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=591&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                                                                                                            <a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                
+                                    </a><div class="mt-4 row cursor-pointer" d_id="20685" h_id="6924" h_type="1"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                        </a><div class="col-12 shadow-card"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                            <div>
+
+                                            </div>
+                                            <h3 class="text-bold text-underline">Zain General Hospital.</h3>
+
+                                            <div class="justify-content-between d-flex align-items-center">
+                                                <div class="">
+                                                    <p class="">Area: mosmiat university, Karachi</p>
+
+                                                                                                                                                                                                                                        <p class="">Rs. 1,200 </p>
+                                                                                                                                                                                                                        </div>
+
+                                            </div>
+                                            <div class="row google-map-sec">
+                                                <div class="col-12 col-md-12">
+
+                                                    <p class="text-bold">Available Timings</p>
+                                                    <table>
+                                                        <tbody>
+                                                                                                                                                                            <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Tue</td>
+                                                                <td>10:00 PM - 11:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Thu</td>
+                                                                <td>10:00 PM - 11:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                                                                                    <tr class="text-sm" style="width:100%">
+                                                                <td style="margin: auto;" class="text-bold text-blue">Sat</td>
+                                                                <td>10:00 PM - 11:00 PM</td>
+                                                            </tr>
+                                                                                                                                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                                                            </div>
+
+                                            </a><div class="col-12 mt-10"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                                                                    </a><div class="row"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                        </a><div class="col-6"><a aria-label="Dr. Feroze Ahmed Mahar's Booking Page" href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="pc_practice_detail_card_dr_profile_tapped text-black">
+                                                            </a><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924" class="button button-blue button-block pc_practice_detail_btn_dr_profile_tapped">Book Appointment</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/callcenter?h_id=6924&amp;b_id=1" class="button button-outline-blue button-block dr_prof_tap_get_addr_book_appt_btn_hosp_list">Get Address</a>
+                                                        </div>
+                                                    </div>
+                                                                                            </div>
+                                            <p class="mt-10 text-light-blue">No extra charges for booking appointment online.</p>
+                                        </div>
+                                    </div>
+                                
+                                                                                                                                                                                                                                    </section>
+
+                    <div class="container bg-white mt-10 mb-10">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                <div>
+                                    <a href="https://www.marham.pk/contact" class="button button-small button-outline-black button-block report_incorrect_contact_dr_profile_tapped">Report In-correct Information</a>
+                                </div>
+
+                            </div>
+                             <div class="col-12 col-md-4">
+                                 <a href="https://www.marham.pk/contact" class="button button-small button-outline-black button-block update_information_dr_profile_tapped">Update Information as Doctor</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                   
+
+                    
+                    <!-- Forum section display -->
+                                        <section class="container bg-white mt-10">
+                        <div class="row shadow-card">
+                            <h2 class="pt-10">Patient Questions from Dr. Feroze Ahmed Mahar </h2>
+                                                        <div class="row border-card mt-10">
+                                <div class="col-12">
+                                    <div class="row justify-content-between">
+                                        <div class="col-12 img-content">
+                                            <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+                                                <g>
+                                                    <path class="st0" d="M256,0C114.613,0,0,114.616,0,255.996C0,397.382,114.613,512,256,512c141.386,0,256-114.617,256-256.004   C512,114.616,397.387,0,256,0z M255.996,401.912c-69.247-0.03-118.719-9.438-117.564-18.058   c6.291-47.108,44.279-51.638,68.402-70.94c10.832-8.666,16.097-6.5,16.097-20.945c0-5.053,0-14.446,0-23.111   c-6.503-7.219-8.867-6.317-14.366-34.663c-11.112,0-10.396-14.446-15.638-27.255c-4.09-9.984-0.988-14.294,2.443-16.165   c-1.852-9.87-0.682-43.01,13.532-60.259l-2.242-15.649c0,0,4.47,1.121,15.646-1.122c11.181-2.227,38.004-8.93,53.654,4.477   c37.557,5.522,47.53,36.368,40.204,72.326c3.598,1.727,7.178,5.962,2.901,16.392c-5.238,12.809-4.522,27.255-15.634,27.255   c-5.496,28.346-7.863,27.444-14.366,34.663c0,8.666,0,18.058,0,23.111c0,14.445,5.261,12.279,16.093,20.945   c24.126,19.301,62.111,23.831,68.406,70.94C374.715,392.474,325.246,401.882,255.996,401.912z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <span class="text-bold text-sm text-grey">Asking For Self, Male 32</span>
+                                        </div>
+                                        <div class="col-4" style="text-align: right;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-10">
+                                        <h3 class="pt-10 text-bold text-blue">Frequent Urination In Day And Night</h3>
+                                        <p>I have problem of frequent urination in day and night earlier it was during day time only bit now its coming in night too disturbing sleep as I have to go two times for urination in night. I have checked blood sugar it is normal. I...</p>
+
+                                        <div class="justify-content-between d-flex align-items-center">
+                                                                                    </div>
+
+                                        <div>
+                                            <span class="text-bold text-sm text-golden"><i class="fa-solid fa-message"></i> 1 Answers </span> <a target="_blank" class="text-underline read_ans_by_dr_profile_clicked" href="https://www.marham.pk/forum/urologist/frequent-urination-in-day-and-night-175658">- Read Answer by Dr. Feroze Ahmed Mahar</a> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="row border-card mt-10">
+                                <div class="col-12">
+                                    <div class="row justify-content-between">
+                                        <div class="col-12 img-content">
+                                            <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+                                                <g>
+                                                    <path class="st0" d="M256,0C114.613,0,0,114.616,0,255.996C0,397.382,114.613,512,256,512c141.386,0,256-114.617,256-256.004   C512,114.616,397.387,0,256,0z M255.996,401.912c-69.247-0.03-118.719-9.438-117.564-18.058   c6.291-47.108,44.279-51.638,68.402-70.94c10.832-8.666,16.097-6.5,16.097-20.945c0-5.053,0-14.446,0-23.111   c-6.503-7.219-8.867-6.317-14.366-34.663c-11.112,0-10.396-14.446-15.638-27.255c-4.09-9.984-0.988-14.294,2.443-16.165   c-1.852-9.87-0.682-43.01,13.532-60.259l-2.242-15.649c0,0,4.47,1.121,15.646-1.122c11.181-2.227,38.004-8.93,53.654,4.477   c37.557,5.522,47.53,36.368,40.204,72.326c3.598,1.727,7.178,5.962,2.901,16.392c-5.238,12.809-4.522,27.255-15.634,27.255   c-5.496,28.346-7.863,27.444-14.366,34.663c0,8.666,0,18.058,0,23.111c0,14.445,5.261,12.279,16.093,20.945   c24.126,19.301,62.111,23.831,68.406,70.94C374.715,392.474,325.246,401.882,255.996,401.912z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <span class="text-bold text-sm text-grey">Asking for Self, Female, 29 years old</span>
+                                        </div>
+                                        <div class="col-4" style="text-align: right;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-10">
+                                        <h3 class="pt-10 text-bold text-blue">Sex Problem</h3>
+                                        <p>I don't feel sex desires for couple of month i don't feel any need for sex or when i met for sex with my husband i have never enjoyed my sex or never feel my sex am really worried my divorce is going to be happen because of this rea...</p>
+
+                                        <div class="justify-content-between d-flex align-items-center">
+                                                                                    </div>
+
+                                        <div>
+                                            <span class="text-bold text-sm text-golden"><i class="fa-solid fa-message"></i> 1 Answers </span> <a target="_blank" class="text-underline read_ans_by_dr_profile_clicked" href="https://www.marham.pk/forum/urologist/sex-problem-147791">- Read Answer by Dr. Feroze Ahmed Mahar</a> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="row border-card mt-10">
+                                <div class="col-12">
+                                    <div class="row justify-content-between">
+                                        <div class="col-12 img-content">
+                                            <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+                                                <g>
+                                                    <path class="st0" d="M256,0C114.613,0,0,114.616,0,255.996C0,397.382,114.613,512,256,512c141.386,0,256-114.617,256-256.004   C512,114.616,397.387,0,256,0z M255.996,401.912c-69.247-0.03-118.719-9.438-117.564-18.058   c6.291-47.108,44.279-51.638,68.402-70.94c10.832-8.666,16.097-6.5,16.097-20.945c0-5.053,0-14.446,0-23.111   c-6.503-7.219-8.867-6.317-14.366-34.663c-11.112,0-10.396-14.446-15.638-27.255c-4.09-9.984-0.988-14.294,2.443-16.165   c-1.852-9.87-0.682-43.01,13.532-60.259l-2.242-15.649c0,0,4.47,1.121,15.646-1.122c11.181-2.227,38.004-8.93,53.654,4.477   c37.557,5.522,47.53,36.368,40.204,72.326c3.598,1.727,7.178,5.962,2.901,16.392c-5.238,12.809-4.522,27.255-15.634,27.255   c-5.496,28.346-7.863,27.444-14.366,34.663c0,8.666,0,18.058,0,23.111c0,14.445,5.261,12.279,16.093,20.945   c24.126,19.301,62.111,23.831,68.406,70.94C374.715,392.474,325.246,401.882,255.996,401.912z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <span class="text-bold text-sm text-grey">Asking For Self, Male 24</span>
+                                        </div>
+                                        <div class="col-4" style="text-align: right;">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-10">
+                                        <h3 class="pt-10 text-bold text-blue">I Have Sex Timing Issue.</h3>
+                                        <p>I have sex timing issue. release within 1 minute plz help me</p>
+
+                                        <div class="justify-content-between d-flex align-items-center">
+                                                                                    </div>
+
+                                        <div>
+                                            <span class="text-bold text-sm text-golden"><i class="fa-solid fa-message"></i> 1 Answers </span> <a target="_blank" class="text-underline read_ans_by_dr_profile_clicked" href="https://www.marham.pk/forum/urologist/i-have-sex-timing-issue-147758">- Read Answer by Dr. Feroze Ahmed Mahar</a> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6 col-md-3 ">
+                                    <a href="https://www.marham.pk/forum/post-a-question" target="_blank" class="button button-block button-blue ask_you_questions_dr_profile_clicked" data-on-panel="1" data-speciality-name="geneticist">Ask your Question</a>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar/questions" target="_blank" class="button button-block button button-outline view_all_questions_dr_profile_clicked">View All Questions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Qualification -->
+                                        <section class="mt-4 p-xy">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-12 bg-marham-light-border shadow-card">
+                                <h2 class="pt-10">Qualification</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Institute</th>
+                                            <th>Degree</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                                                            <tr>
+                                                <td>Liaquat University of Medical and Health Sciences</td>
+                                                <td>MBBS</td>
+                                            </tr>
+                                                                                                                                                                    <tr>
+                                                <td>Liaquat University of Medical and Health Sciences</td>
+                                                <td>MS (Urology)</td>
+                                            </tr>
+                                                                                                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Experience -->
+                                            <section class="mt-4 p-xy">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-12 bg-marham-light-border shadow-card">
+                                    <h2 class="pt-10">Experience</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Institute</th>
+                                                <th>Designation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                            <tr>
+                                                    <td>Hashmani Hospital</td>
+                                                    <td>Consultant</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>Shamsi Hospital</td>
+                                                    <td>Consultant</td>
+                                                </tr>
+                                                                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    
+                    <!-- Videos -->
+                    
+                                        <section class="p-xy">
+                        <div class="row mt-10">
+                            <h2 class="pt-10">FAQs</h2>
+                            <div class="col-12 accordion">
+                                <input type="checkbox" id="section1">
+                                <label for="section1" class="accordion-header">
+                                    <div class="img-content justify-content-between clicked_on_faqs_dr_profile">
+                                        <span>
+                                            What is Dr. Feroze Ahmed Mahar's contact number?
+                                        </span>
+
+                                        <svg style="margin-right: 10px; float: right;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </label>
+                                <div class="accordion-content">
+                                    <div class="p-xy">
+                                        <p>You can contact the Urologist through Marham's helpline: <a href="tel:0311-1222398">0311-1222398</a> and
+                                            we'll connect you with Dr. Feroze Ahmed Mahar</p>
+                                    </div>
+                                </div>
+
+                                <input type="checkbox" id="section2">
+                                <label for="section2" class="accordion-header">
+
+                                    <div class="img-content justify-content-between clicked_on_faqs_dr_profile">
+                                        <span>
+                                            What is the Qualification of Dr. Feroze Ahmed Mahar?
+                                        </span>
+
+                                        <svg style="margin-right: 10px; float: right;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </label>
+                                <div class="accordion-content">
+
+                                    <div class="p-xy">
+                                        <p>
+                                            Dr. Feroze Ahmed Mahar has the following degrees : MBBS, MS (Urology) 
+                                        </p>
+                                    </div>
+
+                                </div>
+                                                                <input type="checkbox" id="section3">
+                                <label for="section3" class="accordion-header">
+
+                                    <div class="img-content justify-content-between clicked_on_faqs_dr_profile">
+                                        <span>
+                                            What is Dr. Feroze Ahmed Mahar's speciality &amp; area of expertise?
+                                        </span>
+
+                                        <svg style="margin-right: 10px; float: right;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                            </path>
+                                        </svg>
+                                    </div>
+
+
+                                </label>
+                                <div class="accordion-content">
+                                    <div class="p-xy">
+                                        <p>Dr. Feroze Ahmed Mahar is specialist Urologist.                                         </p>
+                                                                            </div>
+                                </div>
+
+
+                                <input type="checkbox" id="section5">
+                                <label for="section5" class="accordion-header">
+
+                                    <div class="img-content justify-content-between clicked_on_faqs_dr_profile">
+                                        <span>
+                                            <p class="mb-0">Practice timings of Dr. Feroze Ahmed Mahar are:</p>
+                                        </span>
+
+                                        <svg style="margin-right: 10px; float: right;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                            </path>
+                                        </svg>
+                                    </div>
+
+                                </label>
+                                <div class="accordion-content" style="overflow-y: visible;">
+                                    <div class="p-xy">
+
+                                                                                                                            
+                                            
+                                                                                                                                                                                    
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                
+                                            
+                                                                                                                                                                                    
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                
+                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                    
+
+                                        
+                                        <p><br></p><p class="mb-0 "><b>Tahir Medical Centre</b></p><br><p class="mb-0 font-weight-bold d-flex">Sun</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">12:00 AM - 01:00 AM</li></ul><p></p><br><p class="mb-0 "><b>Australian Concept Fertility Centre</b></p><br><p class="mb-0 font-weight-bold d-flex">Mon</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">03:30 PM - 05:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Wed</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">03:30 PM - 05:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Fri</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">03:30 PM - 05:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Hashmanis Hospital - M A Jinnah Road</b></p><br><p class="mb-0 font-weight-bold d-flex">Fri</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Hamdard University Hospital</b></p><br><p class="mb-0 font-weight-bold d-flex">Mon</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Tue</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Wed</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Thu</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Fri</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Sat</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">04:00 PM - 06:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Modern Hospital</b></p><br><p class="mb-0 font-weight-bold d-flex">Tue</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">07:00 PM - 09:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Thu</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">07:00 PM - 09:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Sat</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">07:00 PM - 09:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Altamash General Hospital</b></p><br><p class="mb-0 font-weight-bold d-flex">Mon</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">08:00 PM - 09:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Wed</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">08:00 PM - 09:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Hilal e Ahmer Hospital Clifton</b></p><br><p class="mb-0 font-weight-bold d-flex">Mon</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">08:30 PM - 10:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Wed</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">08:30 PM - 10:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Fri</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">08:30 PM - 10:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Darul Sehat Hospital</b></p><br><p class="mb-0 font-weight-bold d-flex">Tue</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">09:00 PM - 10:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Thu</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">09:00 PM - 10:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Sat</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">09:00 PM - 10:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Zain General Hospital.</b></p><br><p class="mb-0 font-weight-bold d-flex">Tue</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">10:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Thu</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">10:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Sat</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">10:00 PM - 11:00 PM</li></ul><p></p><br><p class="mb-0 "><b>Video Consultation</b></p><br><p class="mb-0 font-weight-bold d-flex">Mon</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">02:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Tue</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">02:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Wed</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">02:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Thu</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">02:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Fri</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">02:00 PM - 11:00 PM</li></ul><p></p><p class="mb-0 font-weight-bold d-flex">Sat</p><p class="mb-0 d-flex"></p><ul class="mb-0 no-bullets"><li class="mb-0">02:00 PM - 11:00 PM</li></ul><p></p><p></p>
+                                                                                                                                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Services -->
+                                            <section class="mt-4">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-12 bg-marham-light-border border-card mt-3">
+                                    <h2 class="">Services</h2>
+                                    <ul class="grid-list">
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Extracorporeal Shockwave Lithotripsy" href="https://www.marham.pk/all-services/extracorporeal-shockwave-lithotripsy">Extracorporeal Shockwave Lithotripsy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Hypospadias Repair" href="https://www.marham.pk/all-services/hypospadias-repair">Hypospadias Repair</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Percutaneous Nephrolithotomy (PCNL)" href="https://www.marham.pk/all-services/percutaneous-nephrolithotomy-pcnl">Percutaneous Nephrolithotomy (PCNL)</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Urethral Stricture" href="https://www.marham.pk/all-services/urethral-stricture">Urethral Stricture</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Prostate Enlargement" href="https://www.marham.pk/all-services/prostate-enlargement">Prostate Enlargement</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Bedwetting" href="https://www.marham.pk/all-services/bedwetting">Bedwetting</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Bladder Stones" href="https://www.marham.pk/all-services/bladder-stones">Bladder Stones</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Blood In Urine" href="https://www.marham.pk/all-services/blood-in-urine">Blood In Urine</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Burning Micturition" href="https://www.marham.pk/all-services/burning-micturition">Burning Micturition</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Epispadias" href="https://www.marham.pk/all-services/epispadias">Epispadias</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Injury To The Urethra" href="https://www.marham.pk/all-services/injury-to-the-urethra">Injury To The Urethra</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Kidney Infections" href="https://www.marham.pk/all-services/kidney-infections">Kidney Infections</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Nephrectomy" href="https://www.marham.pk/all-services/nephrectomy">Nephrectomy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Prostatectomy" href="https://www.marham.pk/all-services/prostatectomy">Prostatectomy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Pyelolithotomy" href="https://www.marham.pk/all-services/pyelolithotomy">Pyelolithotomy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Tumors Of The Testes" href="https://www.marham.pk/all-services/tumors-of-the-testes">Tumors Of The Testes</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Ureter Stones" href="https://www.marham.pk/all-services/ureter-stones">Ureter Stones</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Weak Bladder Muscles" href="https://www.marham.pk/all-services/weak-bladder-muscles">Weak Bladder Muscles</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Weak Sphincter Muscles" href="https://www.marham.pk/all-services/weak-sphincter-muscles">Weak Sphincter Muscles</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Balloon Dilation" href="https://www.marham.pk/all-services/balloon-dilation">Balloon Dilation</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Cystoscopy" href="https://www.marham.pk/all-services/cystoscopy">Cystoscopy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Kidney Transplant " href="https://www.marham.pk/all-services/kidney-transplant">Kidney Transplant </a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Nephrectomy" href="https://www.marham.pk/all-services/nephrectomy">Nephrectomy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Partial Nephrectomy" href="https://www.marham.pk/all-services/partial-nephrectomy">Partial Nephrectomy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Pyelolithotomy" href="https://www.marham.pk/all-services/pyelolithotomy">Pyelolithotomy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Surgery For Bladder And Prostate Cancer" href="https://www.marham.pk/all-services/surgery-for-bladder-and-prostate-cancer">Surgery For Bladder And Prostate Cancer</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Treatment For Prostate Hypertrophy" href="https://www.marham.pk/all-services/treatment-for-prostate-hypertrophy">Treatment For Prostate Hypertrophy</a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Ureteral Stents " href="https://www.marham.pk/all-services/ureteral-stents">Ureteral Stents </a>
+                                                                                    </li>
+                                                                                <li>
+                                                                                        <a class="sevice_dr_profile_clicked" data-service="Vesicolithotripsy" href="https://www.marham.pk/all-services/vesicolithotripsy">Vesicolithotripsy</a>
+                                                                                    </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                        </section>
+                    
+                    <!-- Diseases -->
+                                        <section class="mt-4">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-12 bg-marham-light-border border-card">
+                                <h2 class="pt-3">Diseases</h2>
+                                <ul class="grid-list">
+                                                                        <li>
+                                                                                <a class="disease_dr_profile_clicked" data-disease="Bladder Prolapse" href="https://www.marham.pk/diseases/bladder-prolapse">Bladder Prolapse</a>
+                                                                            </li>
+                                                                        <li>
+                                                                                <a class="disease_dr_profile_clicked" data-disease="Urinary Incontinence" href="https://www.marham.pk/diseases/urinary-incontinence">Urinary Incontinence</a>
+                                                                            </li>
+                                                                        <li>
+                                                                                <a class="disease_dr_profile_clicked" data-disease="Urinary Tract Infection" href="https://www.marham.pk/diseases/urinary-tract-infection">Urinary Tract Infection</a>
+                                                                            </li>
+                                                                        <li>
+                                                                                <a class="disease_dr_profile_clicked" data-disease="Bladder Divertivulae" href="https://www.marham.pk/diseases/bladder-divertivulae">Bladder Divertivulae</a>
+                                                                            </li>
+                                                                        <li>
+                                                                                <a class="disease_dr_profile_clicked" data-disease="Testicular Cancers" href="https://www.marham.pk/diseases/testicular-cancers">Testicular Cancers</a>
+                                                                            </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                                            <section class="mt-4">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-12 bg-marham-light-border border-card">
+                                    <h2 class="pt-3">Symptoms</h2>
+                                    <ul class="grid-list">
+                                                                                    <li class="symptom_dr_profile_clicked"><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar?symptom=urogenital-system">Urogenital system</a>
+                                            </li>
+                                                                                    <li class="symptom_dr_profile_clicked"><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar?symptom=prostate-issues">Prostate issues</a>
+                                            </li>
+                                                                                    <li class="symptom_dr_profile_clicked"><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar?symptom=urinary-system-issues">Urinary system issues</a>
+                                            </li>
+                                                                                    <li class="symptom_dr_profile_clicked"><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar?symptom=urinary-bladder-issues">Urinary bladder issues</a>
+                                            </li>
+                                                                                    <li class="symptom_dr_profile_clicked"><a href="https://www.marham.pk/doctors/karachi/urologist/dr-feroze-ahmed-mahar?symptom=urinary-tract-infection">Urinary tract infection</a>
+                                            </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                        </section>
+                    
+                    <!-- Symptoms -->
+                    
+                    <!--About -->
+                                            <section>
+                            <div class="container bg-white mt-10 pb-10">
+                                <div class="row">
+                                    <div class="column">
+                                        <h2 class="pt-10">Professional Statement by Dr. Feroze Ahmed Mahar</h2>
+                                        <div class="">
+                                            <p><strong>Dr. Feroze Ahmed Mahar - Urologist, Karachi - Appointment Details</strong></p><p>Dr. Feroze Ahmed Mahar is a qualified Urologist in Karachi with over 20 years in the field of urology. With specialized qualifications and a broad range of experience, this doctor provides the best treatment for all diseases related to the urinary tract or reproductive organs. Dr. Feroze Ahmed Mahar has treated over 331 number of patients through Marham and has 157 number of reviews. You can book an appointment with doctor Dr. Feroze Ahmed Mahar through Marham’s Helpline.</p><p><strong>Role of Urologist:</strong></p><p>Urologist Dr. Feroze Ahmed Mahar - is a specialist with extensive education and training in the prevention, diagnosis, and treatment of genito-urinary diseases. He is specialized in treating conditions pertaining to the urinary bladder, urethra, ureters, and the associated reproductive parts like the testes and pelvic floor.&nbsp;</p><p>Doctors in primary care see a wide range of ailments throughout the day, whereas Dr. Feroze Ahmed Mahar Urologist focuses on urinary disorders and provides disease management in a friendly environment.&nbsp;</p><p>Dr. Feroze Ahmed Mahar can provide prevention, diagnosis, treatment, and management for issues like urinary tract infections, testicular tumors, &nbsp;benign prostate hyperplasia, urinary incontinence, hematuria, erectile dysfunction, bladder prolapse, and cancer of the prostate, bladder, or kidneys.</p><p>To figure out the underlying diseases and for their treatment, Urologists may perform services like cystoscopy, surgery for bladder or prostate cancer, balloon dilation, kidney transplant, prostatectomy, or hypospadias repair.</p><p>Moreover, Urologist Dr. Feroze Ahmed Mahar may order certain tests for diagnoses of the underlying diseases, like;</p><ul><li dir="ltr"><p>Urinalysis</p></li><li dir="ltr"><p>Digital Rectal Exam (DRE)</p></li><li dir="ltr"><p>Urine culture</p></li><li dir="ltr"><p>Cystoscopy</p></li><li dir="ltr"><p>Cystography</p></li><li dir="ltr"><p>Imaging tests</p></li><li dir="ltr"><p>Prostate-Specific Antigen (PSA) blood test</p></li><li dir="ltr"><p>Creatinine blood test</p></li><li dir="ltr"><p>Renal angiogram</p></li></ul><p>If you have a problem with your bladder, urethra, ureters, or related organs that require special attention, your primary healthcare provider may send you to a Urologist.</p><p>If you are experiencing the symptoms of blood in urine, burning micturation, bed wetting, erectile dysfunction, urinary incontinence, infertility, pelvic pain, trouble urinating, or other related symptoms that require special attention, contact Dr. Feroze Ahmed Mahar.&nbsp;</p><p>As they monitor your circumstances, your urologist may continue to work with you for a long period.</p><p></p><p class="m-0 p-0"><b>Qualifications:</b>MBBS from Liaquat University of Medical and Health Sciences and MS (Urology) from Liaquat University of Medical and Health Sciences</p><p></p><p><strong>Doctor's Experience:</strong> Dr. Feroze Ahmed Mahar has been dealing with patients with all Urologist related diseases for the past 20 years and has an excellent success rate.</p><p><strong>Patient Satisfaction Score:</strong> Dr. Feroze Ahmed Mahar has an impressive 95 patient satisfaction score and has received 157 positive reviews from Marham users.</p><p></p><p></p><p><strong>Dr. Feroze Ahmed Mahar Appointment Details:</strong></p><p>Dr. Feroze Ahmed Mahar, the Urologist, is available for Marham's in-person and online video consultation.</p><p><b>Dr. Feroze Ahmed Mahar‘sClifton,Karachi:</b></p><div class="m-0 p-0">Clifton, Karachi</div><div class="m-0 p-0">Dr. Feroze Ahmed Mahar‘s clinic timings are 03:30 PM - 05:00 PM</div><div class="m-0 p-0"> You can contact Dr. Feroze Ahmed Mahar at 042-32591427</div><p></p><p></p><p class="m-0 p-0"><b>Dr. Feroze Ahmed Mahar's Fee</b><br>Dr. Feroze Ahmed Mahar charges a fee of  PKR1,500 you can book your appointment now by calling 042-32591427</p><p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    
+                                            <section>
+    <div class="container bg-white mt-10 pb-10">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h2 class="pt-10">Get Affordable Care from Urologists in Karachi</h2>
+                <div class="row horizontal-scroll d-flex smart-bar">
+                                        <div class="col-12 col-md-6 shadow-card">
+    <div class="row">
+        <div class="col-3 col-md-2">
+            <!-- <div style="height:60px; width:60px; background-color: #ddd; border-radius: 50%;"></div> -->
+            <img class="round-img" height="60" width="60" src="https://staticconnect.marham.pk/assets/doctors/25360/dr-muhammad-imran-malik-urologist-karachi-9_80X80.webp" alt="dr-muhammad-imran-malik-urologist-karachi">
+        </div>
+        <div class="col-9 col-md-10 event_tapped_top_doctor" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360">
+            <h3 class="mb-0  mt-10 text-blue text-underline" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360">
+                <a href="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360">Dr. Muhammad Imran Malik</a>
+            </h3>
+            <p class="text-sm">Available today</p>
+                            <p class="text-sm">Rs. 700</p>
+                    </div>
+    </div>
+
+    <div class="row mt-10">
+                <div class="col-6">
+            <p class="text-sm chips-highlight text-orange"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i> 587 Reviews</p>
+        </div>
+                        <div class="col-6">
+            <p class="text-sm chips-highlight">8+ Years Experience</p>
+        </div>
+            </div>
+
+    <div class="row mt-10 event_tapped_top_doctor" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360">
+        <div class="col-8" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360">
+            <a href="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-imran-malik-25360" class="button-small button-blue button-block">View Profile</a>
+        </div>
+        <div class="col-4">
+            <a href="javascript:void(0)" class="button-small button-outline-blue button-block" onclick="openWhatsAppDynamic('Dr. Muhammad Imran Malik', '25360', '1')">
+                <i class="fa-solid fa-phone fa-beat"></i> Call
+            </a>
+        </div>
+        
+    </div>
+</div>                                        <div class="col-12 col-md-6 shadow-card">
+    <div class="row">
+        <div class="col-3 col-md-2">
+            <!-- <div style="height:60px; width:60px; background-color: #ddd; border-radius: 50%;"></div> -->
+            <img class="round-img" height="60" width="60" src="https://staticconnect.marham.pk/assets/doctors/8729/dr-muhammad-shoaib-mithani-urologist-karachi-73_80X80.webp" alt="dr-muhammad-shoaib-mithani-urologist-karachi">
+        </div>
+        <div class="col-9 col-md-10 event_tapped_top_doctor" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729">
+            <h3 class="mb-0  mt-10 text-blue text-underline" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729">
+                <a href="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729">Dr. Muhammad Shoaib Mithani</a>
+            </h3>
+            <p class="text-sm">Available Today</p>
+                            <p class="text-sm">Rs. 1700</p>
+                    </div>
+    </div>
+
+    <div class="row mt-10">
+                <div class="col-6">
+            <p class="text-sm chips-highlight text-orange"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i> 1,730 Reviews</p>
+        </div>
+                        <div class="col-6">
+            <p class="text-sm chips-highlight">20+ Years Experience</p>
+        </div>
+            </div>
+
+    <div class="row mt-10 event_tapped_top_doctor" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729">
+        <div class="col-8" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729">
+            <a href="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729" data-url="https://www.marham.pk/online-consultation/urologist/karachi/dr-muhammad-shoaib-mithani-8729" class="button-small button-blue button-block">View Profile</a>
+        </div>
+        <div class="col-4">
+            <a href="javascript:void(0)" class="button-small button-outline-blue button-block" onclick="openWhatsAppDynamic('Dr. Muhammad Shoaib Mithani', '8729', '1')">
+                <i class="fa-solid fa-phone fa-beat"></i> Call
+            </a>
+        </div>
+        
+    </div>
+</div>                                        <div class="col-12 col-md-6 shadow-card">
+    <div class="row">
+        <div class="col-3 col-md-2">
+            <!-- <div style="height:60px; width:60px; background-color: #ddd; border-radius: 50%;"></div> -->
+            <img class="round-img" height="60" width="60" src="https://staticconnect.marham.pk/assets/doctors/13084/prof-dr-shahzad-ali-urologist-karachi-29_80X80.webp" alt="prof-dr-shahzad-ali-urologist-karachi">
+        </div>
+        <div class="col-9 col-md-10 event_tapped_top_doctor" data-url="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali">
+            <h3 class="mb-0  mt-10 text-blue text-underline" data-url="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali">
+                <a href="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali" data-url="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali">Prof. Dr. Shahzad Ali</a>
+            </h3>
+            <p class="text-sm">Available from Dec 08</p>
+                            <p class="text-sm">Rs. 2500</p>
+                    </div>
+    </div>
+
+    <div class="row mt-10">
+                <div class="col-6">
+            <p class="text-sm chips-highlight text-orange"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i> 815 Reviews</p>
+        </div>
+                        <div class="col-6">
+            <p class="text-sm chips-highlight">30+ Years Experience</p>
+        </div>
+            </div>
+
+    <div class="row mt-10 event_tapped_top_doctor" data-url="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali">
+        <div class="col-8" data-url="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali">
+            <a href="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali" data-url="https://www.marham.pk/doctors/karachi/urologist/prof-dr-shahzad-ali" class="button-small button-blue button-block">View Profile</a>
+        </div>
+        <div class="col-4">
+            <a href="javascript:void(0)" class="button-small button-outline-blue button-block" onclick="openWhatsAppDynamic('Prof. Dr. Shahzad Ali', '13084', '1')">
+                <i class="fa-solid fa-phone fa-beat"></i> Call
+            </a>
+        </div>
+        
+    </div>
+</div>                                    </div>
+            </div>
+        </div>
+    </div>
+</section>                    
+                    <div class="clearfix"></div>
+                </div>
