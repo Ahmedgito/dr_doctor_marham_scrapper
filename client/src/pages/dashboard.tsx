@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "wouter";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { queryClient, apiRequest } from "@/lib/queryClient";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -35,6 +36,7 @@ import {
   Timer
 } from "lucide-react";
 import type { ScraperStatus, ScraperResults, ScraperConfig, Hospital, Doctor, ExtendedResults, SchedulerStatus } from "@shared/schema";
+import { clearAuth } from "@/pages/login";
 
 type LogEntry = {
   timestamp: string;
@@ -607,6 +609,8 @@ function ConfigurationPanel({
 
 export default function Dashboard() {
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
+  const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [config, setConfig] = useState<Partial<ScraperConfig>>({
     startUrl: "https://www.marham.pk/hospitals/karachi",
     delayBetweenRequests: 2000,
@@ -768,6 +772,15 @@ export default function Dashboard() {
     },
   });
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedUser = window.localStorage.getItem("auth_username");
+      if (storedUser) {
+        setCurrentUser(storedUser);
+      }
+    }
+  }, []);
+
   const currentStatus: ScraperStatus = status || {
     status: "idle",
     hospitalsProcessed: 0,
@@ -793,14 +806,33 @@ export default function Dashboard() {
                 <p className="text-sm text-muted-foreground">Hospital & Doctor Data Extraction</p>
               </div>
             </div>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={() => { refetchStatus(); refetchResults(); refetchSavedState(); refetchScheduler(); }}
-              data-testid="button-refresh"
-            >
-              <RefreshCw className="h-4 w-4" />
-            </Button>
+            <div className="flex items-center gap-2">
+              {currentUser && (
+                <div className="flex items-center gap-2 rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
+                  <Users className="h-3 w-3" />
+                  <span>{currentUser}</span>
+                </div>
+              )}
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={() => { refetchStatus(); refetchResults(); refetchSavedState(); refetchScheduler(); }}
+                data-testid="button-refresh"
+              >
+                <RefreshCw className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  clearAuth();
+                  setLocation("/login");
+                }}
+                data-testid="button-logout"
+              >
+                Logout
+              </Button>
+            </div>
           </div>
         </div>
       </header>
