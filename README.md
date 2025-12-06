@@ -77,13 +77,9 @@ The application is designed for:
   - Deduplicated doctor view: one row per doctor with all affiliated hospitals.
 
 - **Exports**
-  - `GET /api/scraper/export` → JSON file with full structure.
-  - `GET /api/scraper/export/csv` → CSV of deduplicated doctors.
-  - `GET /api/scraper/export/hospitals-csv` → CSV of hospitals with doctors.
-
-- **Private access**
-  - Simple login screen in front of the dashboard.
-  - Credentials controlled via environment variables (`VITE_AUTH_USERNAME`, `VITE_AUTH_PASSWORD`).
+  - → JSON file with full structure.
+  - → CSV of deduplicated doctors.
+  - → CSV of hospitals with doctors.
 
 ---
 
@@ -118,38 +114,6 @@ npx tsx server/index.ts
 
 - The Express server starts and attaches Vite in development mode.
 - The dashboard and APIs are available on the configured port (by default **http://localhost:5000**).
-
----
-
-## API Surface (Summary)
-
-**Scraper control**
-
-- `GET /api/scraper/status` – current scraper status and logs.
-- `GET /api/scraper/results` – raw hospital-level results.
-- `GET /api/scraper/results/extended` – extended results with deduplicated doctors.
-- `POST /api/scraper/start` – start scraping with an optional config payload.
-- `POST /api/scraper/pause` – pause the current run.
-- `POST /api/scraper/resume` – resume from a paused state.
-- `POST /api/scraper/stop` – stop and save progress.
-- `GET /api/scraper/saved-state` – inspect saved progress.
-- `POST /api/scraper/resume-from-save` – resume from saved state.
-- `POST /api/scraper/clear-state` – clear saved state.
-
-**Exports**
-
-- `GET /api/scraper/export` – JSON export.
-- `GET /api/scraper/export/csv` – deduplicated doctors CSV.
-- `GET /api/scraper/export/hospitals-csv` – hospitals + doctors CSV.
-
-**Scheduler**
-
-- `GET /api/scheduler/status` – scheduler status.
-- `POST /api/scheduler/configure` – configure scheduler.
-- `POST /api/scheduler/start` – enable and start scheduler.
-- `POST /api/scheduler/stop` – stop scheduler.
-- `POST /api/scheduler/run-now` – trigger an immediate run.
-- `POST /api/scheduler/reset` – reset scheduler state.
 
 ---
 
