@@ -1,5 +1,7 @@
 import puppeteer, { Browser, Page } from "puppeteer";
 import * as cheerio from "cheerio";
+import fs from "fs";
+import path from "path";
 import type { ScraperConfig, ScraperStatus, Hospital, Doctor, ScraperResults, DeduplicatedDoctor, ExtendedResults } from "@shared/schema";
 
 type LogLevel = "info" | "warn" | "error" | "success";
@@ -16,7 +18,19 @@ interface ErrorEntry {
   context?: string;
 }
 
+interface FailedHospitalEntry {
+  name: string;
+  url: string;
+  address: string;
+  attempts: number;
+  lastError?: string;
+  lastAttemptAt?: string;
+}
+
 const BASE_URL = "https://www.marham.pk";
+// Use process.cwd() instead of __dirname because this file is executed in ESM/tsx context
+const STATE_FILE_PATH = path.join(process.cwd(), "scraper-state.json");
+const MAX_RETRY_ATTEMPTS_PER_HOSPITAL = 3;
 
 // Helper functions for data cleaning
 function normalizeFeesToNumeric(fees: string): { formatted: string; numeric: number | null } {
@@ -55,6 +69,7 @@ interface ScraperState {
   hospitals: Hospital[];
   doctorsScraped: number;
   startedAt?: string;
+  failedHospitals?: FailedHospitalEntry[];
 }
 
 class MarhamScraper {
@@ -72,6 +87,7 @@ class MarhamScraper {
   constructor() {
     this.config = this.getDefaultConfig();
     this.status = this.getInitialStatus();
+    this.loadStateFromFile();
   }
 
   private getDefaultConfig(): ScraperConfig {
@@ -161,6 +177,31 @@ class MarhamScraper {
     return BASE_URL + "/" + url;
   }
 
+  private loadStateFromFile(): void {
+    try {
+      if (fs.existsSync(STATE_FILE_PATH)) {
+        const raw = fs.readFileSync(STATE_FILE_PATH, "utf-8");
+        const parsed: ScraperState = JSON.parse(raw);
+        this.savedState = parsed;
+        if (!Array.isArray(this.savedState.failedHospitals)) {
+          this.savedState.failedHospitals = [];
+        }
+        this.log("info", `Loaded saved state from disk: ${parsed.hospitalsProcessed} hospitals processed, ${parsed.doctorsScraped} doctors scraped`);
+      }
+    } catch (error) {
+      console.error("Failed to load scraper state from file", error);
+    }
+  }
+
+  private persistStateToFile(): void {
+    if (!this.savedState) return;
+    try {
+      fs.writeFileSync(STATE_FILE_PATH, JSON.stringify(this.savedState, null, 2), "utf-8");
+    } catch (error) {
+      console.error("Failed to persist scraper state to file", error);
+    }
+  }
+
   async start(config?: Partial<ScraperConfig>, resume: boolean = false): Promise<void> {
     if (this.isRunning) {
       throw new Error("Scraper is already running");
@@ -171,6 +212,9 @@ class MarhamScraper {
       this.config = this.savedState.config;
       this.hospitals = [...this.savedState.hospitals];
       this.pendingHospitalLinks = [...this.savedState.hospitalLinks];
+      if (!Array.isArray(this.savedState.failedHospitals)) {
+        this.savedState.failedHospitals = [];
+      }
       this.status = {
         ...this.getInitialStatus(),
         status: "running",
@@ -212,6 +256,8 @@ class MarhamScraper {
       }
     } catch (error) {
       this.status.status = "error";
+      // Save current state so user can resume after unexpected errors
+      this.saveState();
       this.addError(error instanceof Error ? error.message : "Unknown error occurred");
     } finally {
       this.isRunning = false;
@@ -251,8 +297,92 @@ class MarhamScraper {
         hospitals: [...this.hospitals],
         doctorsScraped: this.status.doctorsScraped,
         startedAt: this.status.startedAt,
+        failedHospitals: this.savedState?.failedHospitals || [],
       };
       this.log("info", `State saved: ${this.status.hospitalsProcessed} hospitals processed, ${this.hospitals.length} ready for resume`);
+      this.persistStateToFile();
+    }
+  }
+
+  private recordFailedHospital(hospitalInfo: { name: string; url: string; address: string }, errorMessage: string): void {
+    // Ensure we have a state container to persist failures even if the run crashes later.
+    if (!this.savedState) {
+      this.savedState = {
+        config: this.config,
+        hospitalsProcessed: this.status.hospitalsProcessed,
+        hospitalLinks: this.pendingHospitalLinks,
+        hospitals: [...this.hospitals],
+        doctorsScraped: this.status.doctorsScraped,
+        startedAt: this.status.startedAt,
+        failedHospitals: [],
+      };
+    }
+    if (!Array.isArray(this.savedState.failedHospitals)) {
+      this.savedState.failedHospitals = [];
+    }
+
+    const absoluteUrl = this.makeAbsoluteUrl(hospitalInfo.url);
+    const existingIdx = this.savedState.failedHospitals.findIndex((h) => this.makeAbsoluteUrl(h.url) === absoluteUrl);
+    const existing = existingIdx >= 0 ? this.savedState.failedHospitals[existingIdx] : undefined;
+
+    const updated: FailedHospitalEntry = {
+      name: hospitalInfo.name,
+      url: absoluteUrl,
+      address: hospitalInfo.address,
+      attempts: (existing?.attempts || 0) + 1,
+      lastError: errorMessage,
+      lastAttemptAt: new Date().toISOString(),
+    };
+
+    if (existingIdx >= 0) {
+      this.savedState.failedHospitals[existingIdx] = updated;
+    } else {
+      this.savedState.failedHospitals.push(updated);
+    }
+  }
+
+  private async retryFailedHospitalsOnResume(): Promise<void> {
+    if (!this.savedState || !Array.isArray(this.savedState.failedHospitals) || this.savedState.failedHospitals.length === 0) {
+      return;
+    }
+
+    const retryable = this.savedState.failedHospitals.filter((h) => (h.attempts || 0) < MAX_RETRY_ATTEMPTS_PER_HOSPITAL);
+    if (retryable.length === 0) {
+      this.log("warn", `Saved state has ${this.savedState.failedHospitals.length} failed hospitals but all exceeded retry limit`);
+      return;
+    }
+
+    this.log("info", `Retrying ${retryable.length} previously failed hospitals before continuing...`);
+
+    // Iterate over a snapshot so we can mutate the underlying list on success/failure.
+    for (const failed of [...retryable]) {
+      if (await this.waitForPauseOrStop()) break;
+
+      this.status.currentHospital = failed.name;
+      this.status.currentDoctor = undefined;
+      this.log("info", `Retrying failed hospital (${failed.attempts + 1}/${MAX_RETRY_ATTEMPTS_PER_HOSPITAL}): ${failed.name}`);
+
+      try {
+        const hospital = await this.scrapeHospitalDetails({
+          name: failed.name,
+          url: failed.url,
+          address: failed.address,
+        });
+        this.hospitals.push(hospital);
+        this.log("success", `Recovered failed hospital: ${hospital.hospitalName} (${hospital.doctors.length} doctors)`);
+
+        // Remove from failed list on success
+        const idx = this.savedState.failedHospitals.findIndex((h) => this.makeAbsoluteUrl(h.url) === this.makeAbsoluteUrl(failed.url));
+        if (idx >= 0) this.savedState.failedHospitals.splice(idx, 1);
+        this.saveState();
+      } catch (error) {
+        const errMsg = error instanceof Error ? error.message : "Unknown error";
+        this.addError(`Retry failed for hospital: ${failed.name}`, errMsg);
+        this.recordFailedHospital({ name: failed.name, url: failed.url, address: failed.address }, errMsg);
+        this.saveState();
+      }
+
+      await this.delay(this.config.delayBetweenRequests);
     }
   }
 
@@ -271,6 +401,13 @@ class MarhamScraper {
   clearSavedState(): void {
     this.savedState = null;
     this.log("info", "Saved state cleared");
+    try {
+      if (fs.existsSync(STATE_FILE_PATH)) {
+        fs.unlinkSync(STATE_FILE_PATH);
+      }
+    } catch (error) {
+      console.error("Failed to delete scraper state file", error);
+    }
   }
 
   getStatus(): ScraperStatus {
@@ -411,13 +548,74 @@ class MarhamScraper {
     }
   }
 
+  private async loadAllCards(cardSelector: string, loadMoreSelector: string): Promise<void> {
+    if (!this.page) return;
+
+    try {
+      let previousCount = await this.page.$$eval(cardSelector, (els) => els.length);
+      let safetyCounter = 0;
+      let loadMoreClicked = false;
+
+      while (safetyCounter < 1000) { // Prevent infinite loops
+        // Check if load more button exists and is visible
+        const loadMoreButton = await this.page.$(loadMoreSelector);
+        if (!loadMoreButton) {
+          this.log("info", "No more 'Load More' button found");
+          break;
+        }
+
+        // Scroll to the load more button
+        await this.page.evaluate((el) => {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, loadMoreButton);
+
+        // Wait a bit for any lazy loading
+        await this.delay(1000);
+
+        // Click the button and wait for network to be idle
+        await Promise.all([
+          this.page.waitForNetworkIdle({ idleTime: 1000, timeout: 10000 }).catch(() => {}),
+          loadMoreButton.click().catch(() => {})
+        ]);
+
+        // Wait for content to load
+        await this.delay(2000);
+
+        // Check if new content was loaded
+        const currentCount = await this.page.$$eval(cardSelector, (els) => els.length);
+        if (currentCount <= previousCount) {
+          if (loadMoreClicked) {
+            // If we already clicked once and no new content, we're probably at the end
+            this.log("info", "No new content loaded after clicking 'Load More'");
+            break;
+          }
+          // Sometimes the first click doesn't work, try one more time
+          loadMoreClicked = true;
+          continue;
+        }
+
+        previousCount = currentCount;
+        safetyCounter++;
+        loadMoreClicked = false;
+        this.log("info", `Loaded ${currentCount} items so far...`);
+      }
+
+      if (safetyCounter >= 1000) {
+        this.log("warn", "Reached safety limit while loading more content");
+      }
+    } catch (error) {
+      this.log("warn", `Error while loading more content: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
   private async scrapeHospitals(resume: boolean = false): Promise<void> {
     if (!this.page) throw new Error("Browser not initialized");
 
     let hospitalsToProcess: { name: string; url: string; address: string }[];
     let startIndex = 0;
-
+    
     if (resume && this.pendingHospitalLinks.length > 0) {
+      await this.retryFailedHospitalsOnResume();
       hospitalsToProcess = this.pendingHospitalLinks;
       startIndex = this.status.hospitalsProcessed;
       this.log("info", `Resuming with ${hospitalsToProcess.length - startIndex} hospitals remaining`);
@@ -426,6 +624,8 @@ class MarhamScraper {
       this.log("info", `Navigating to ${startUrl}`);
       await this.page.goto(startUrl, { waitUntil: "networkidle2", timeout: 60000 });
       await this.delay(2000);
+
+      await this.loadAllCards(this.config.selectors.hospitalCard, ".loadMore, #loadMore");
 
       const hospitalLinks = await this.extractHospitalLinks();
       this.status.totalHospitals = this.config.maxHospitals 
@@ -454,11 +654,17 @@ class MarhamScraper {
         this.hospitals.push(hospital);
         this.status.hospitalsProcessed++;
         this.log("success", `Completed: ${hospital.hospitalName} (${hospital.doctors.length} doctors)`);
+        // Persist progress after each hospital so it can be resumed later
+        this.saveState();
       } catch (error) {
+        const errMsg = error instanceof Error ? error.message : "Unknown error";
         this.addError(
           `Failed to scrape hospital: ${hospitalInfo.name}`,
-          error instanceof Error ? error.message : "Unknown error"
+          errMsg
         );
+        // Persist this failure so a restart can retry it first.
+        this.recordFailedHospital(hospitalInfo, errMsg);
+        this.saveState();
       }
 
       await this.delay(this.config.delayBetweenRequests);
@@ -508,39 +714,20 @@ class MarhamScraper {
     await this.page.goto(absoluteUrl, { waitUntil: "networkidle2", timeout: 60000 });
     await this.delay(2000);
 
-    const doctors: Doctor[] = [];
-    let hasMorePages = true;
-    let pageNum = 1;
+    await this.loadAllCards(this.config.selectors.doctorCard, ".loadMore, #loadMore");
 
-    while (hasMorePages && !this.isStopped) {
-      if (await this.waitForPauseOrStop()) break;
+    const allDoctors = await this.extractDoctorsFromPage();
+    const limitedDoctors = this.config.maxDoctorsPerHospital
+      ? allDoctors.slice(0, this.config.maxDoctorsPerHospital)
+      : allDoctors;
 
-      this.log("info", `Scraping doctors page ${pageNum} for ${hospitalInfo.name}`);
-      const pageDoctors = await this.extractDoctorsFromPage();
-      
-      const limitedDoctors = this.config.maxDoctorsPerHospital
-        ? pageDoctors.slice(0, this.config.maxDoctorsPerHospital - doctors.length)
-        : pageDoctors;
-
-      doctors.push(...limitedDoctors);
-      this.status.doctorsScraped += limitedDoctors.length;
-
-      if (this.config.maxDoctorsPerHospital && doctors.length >= this.config.maxDoctorsPerHospital) {
-        break;
-      }
-
-      hasMorePages = await this.goToNextPage();
-      if (hasMorePages) {
-        pageNum++;
-        await this.delay(this.config.delayBetweenRequests);
-      }
-    }
+    this.status.doctorsScraped += limitedDoctors.length;
 
     return {
       hospitalName: hospitalInfo.name,
       hospitalAddress: hospitalInfo.address,
       hospitalUrl: absoluteUrl,
-      doctors,
+      doctors: limitedDoctors,
     };
   }
 
